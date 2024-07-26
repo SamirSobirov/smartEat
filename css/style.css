@@ -1,0 +1,26 @@
+.food_box{
+    width: 100%;
+    height: 230px;
+    border: 1px solid transparent;
+    margin-top: 15px;
+}
+.food_item{
+    width: 100%;
+    height: 30%;
+    border: 1px solid transparent;
+}
+.food_box .food_item p{
+    color: #648179;
+    font-size: 12px;
+    font-weight: 400;
+}
+.food_box .food_item input{
+    color: #808080;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    border: 1px solid #808080 ;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px;
+}

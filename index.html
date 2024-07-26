@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -441,12 +442,50 @@
             <h1 class="font-bold">FOOD PREFERENCES</h1>
             <img src="./images/icons/arrow-up.svg" alt="">
         </div>
-        <img src="./images/img/back_1.png" alt="">
+        <img src="./images/img/Background.png" alt="">
 
 
         
-        <p class="font-semibold text-sm">What carbohydrates do you want in your meal plan?<br>
-            (We don’t make plans without carbohydrates.)</p>
+        <p class="font-semibold text-sm">How many days in a row do you want to eat the same
+            meal?   <br>
+            (Your answer will affect how often you need to cook.)
+            </p>
+
+        <div class="food_box">
+            <div class="food_item">
+                <p>Breakfast</p>
+                <input type="text"  placeholder="Select a value …" >
+                
+            </div>
+            <div class="food_item">
+                <p>Lunch</p>
+                <input type="text"  placeholder="Select a value …" >
+            </div>
+            <div class="food_item">
+                <p>Dinner</p>
+                <input type="text"  placeholder="Select a value …"  >
+            </div>
+           
+        </div>
+        <p class="font-semibold text-sm">Which snacks do you want?
+          </p>
+
+
+        <div class=" flex flex-col space-y-2 pt-8 gap-4">
+            <label class="flex items-center">
+                <input type="checkbox" class="w-6 h-6  mr-2">Mid-Morning snack
+            </label>
+            <label class="flex items-center">
+                <input type="checkbox" class="w-6 h-6  mr-2"> Afternoon snack
+            </label>
+            <label class="flex items-center">
+                <input type="checkbox" class="w-6 h-6  mr-2"> Evening snack
+            </label>
+            <label class="flex items-center">
+                <input type="checkbox" class="w-6 h-6  mr-2"> Without snacks
+            </label>
+        </div>
+
 
 </section>
 
