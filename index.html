@@ -28,31 +28,83 @@
 
             <img src="./images/img/back_1.svg" alt="">
 
-            <p class="font-semibold text-sm">What carbohydrates do you want in your meal plan?<br>
-                (We don’t make plans without carbohydrates.)</p>
+            <p class="font-semibold text-sm">Какие крупы/гарниры вы едите? (планы без круп не составляются)</p>
+
+                <p id="message" class="text-red-500 text-xs text-right pt-2">Выберите еще хотя бы 2 элемента</p>
+                <div class="flex flex-col space-y-2 pt-8 gap-4">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Гречка
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Рис белый
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()">Овсянка
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Пшенка
+                    </label>
+                </div>
 
 
-            <div class=" flex flex-col space-y-2 pt-8 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2"> Oats
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2"> Steel cut oats
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2"> Granola
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2"> White rice
-                </label>
-            </div>
+
+                <div id="moreItems" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Перловка
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Макароны из твердых сортов пшеницы
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Чечевица
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Картофель
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Булгур
+                    </label>
+                </div>
+
+                <script>
+                    function updateMessage() {
+                        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                        let checkedCount = 0;
+            
+                        checkboxes.forEach(checkbox => {
+                            if (checkbox.checked) {
+                                checkedCount++;
+                            }
+                        });
+            
+                        const message = document.getElementById('message');
+                        const remaining = 2 - checkedCount;
+            
+                        if (remaining > 0) {
+                            message.textContent = `Выберите еще хотя бы ${remaining} элемента`;
+                        } else {
+                            message.textContent = "Достаточное количество элементов выбрано";
+                        }
+                    }
+            
+                    function showMore() {
+                        const moreItems = document.getElementById('moreItems');
+                        if (moreItems.classList.contains('hidden')) {
+                            moreItems.classList.remove('hidden');
+                        } else {
+                            moreItems.classList.add('hidden');
+                        }
+                    }
+                </script>
 
 
-            <div class="pt-4 flex whitespace-nowrap gap-2">
-                <img src="./images/icons/more_icon.svg" alt="">
-                <p class="text-gray-500">more</p>
-            </div>
 
+              
+
+<button class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore()">
+    <img src="./images/icons/more_icon.svg" alt="">
+    <p class="text-gray-500">больше</p>
+</button>
 
 
             <p class="font-semibold text-sm pt-8">What bread products do you want in your meal plan?</p>
