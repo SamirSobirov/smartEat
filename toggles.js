@@ -8,8 +8,8 @@ document.getElementById('toggleButtonDish').addEventListener('click', function (
 
 
 document.getElementById('toggleButtonDish').addEventListener('click', function() {
-    var contentDish = document.getElementById('contentDish');
-    var toggleButton = document.getElementById('toggleButtonDish').querySelector('img');
+    const contentDish = document.getElementById('contentDish');
+    const toggleButton = document.getElementById('toggleButtonDish').querySelector('img');
     
     contentDish.classList.toggle('hidden');
     toggleButton.classList.toggle('rotated');
