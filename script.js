@@ -40,6 +40,7 @@ function updateMessage() {
         message.textContent = `Выберите еще хотя бы ${remaining} элемента`;
     } else {
         message.textContent = "Достаточное количество элементов выбрано";
+
     }
 }
 
