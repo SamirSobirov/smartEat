@@ -47,3 +47,6 @@ function showMore() {
     const moreItems = document.getElementById('moreItems');
     moreItems.classList.toggle('hidden');
 }
+
+
+

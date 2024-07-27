@@ -1,21 +1,3 @@
-document.getElementById('toggleButtonDish').addEventListener('click', function () {
-    const contentDish = document.getElementById('contentDish');
-    const toggleButton = document.getElementById('toggleButtonDish').querySelector('img');
-
-    contentDish.classList.toggle('hidden');
-    toggleButton.classList.toggle('rotated');
-});
-
-
-
-document.getElementById('toggleButtonCooking').addEventListener('click', function() {
-    const content = document.getElementById('contentCooking');
-    const button = document.getElementById('toggleButtonCooking');
-    content.classList.toggle('hidden');
-    button.classList.toggle('rotate');
-});
-
-
 document.getElementById('toggleButton').addEventListener('click', function() {
     const content = document.getElementById('content');
     const button = document.getElementById('toggleButton');
@@ -32,4 +14,20 @@ document.getElementById('toggleButtonFood').addEventListener('click', function()
     button.classList.toggle('rotate');
 });
 
+document.getElementById('toggleButtonCooking').addEventListener('click', function() {
+    const content = document.getElementById('contentCooking');
+    const button = document.getElementById('toggleButtonCooking');
+    content.classList.toggle('hidden');
+    button.classList.toggle('rotate');
+});
+
+
+
+document.getElementById('toggleButtonDish').addEventListener('click', function() {
+    var contentDish = document.getElementById('contentDish');
+    var toggleButton = document.getElementById('toggleButtonDish').querySelector('img');
+    
+    contentDish.classList.toggle('hidden');
+    toggleButton.classList.toggle('rotated');
+});
 
