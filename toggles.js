@@ -7,14 +7,6 @@ document.getElementById('toggleButtonDish').addEventListener('click', function (
 });
 
 
-document.getElementById('toggleButtonDish').addEventListener('click', function() {
-    const contentDish = document.getElementById('contentDish');
-    const toggleButton = document.getElementById('toggleButtonDish').querySelector('img');
-    
-    contentDish.classList.toggle('hidden');
-    toggleButton.classList.toggle('rotated');
-});
-
 
 document.getElementById('toggleButtonCooking').addEventListener('click', function() {
     const content = document.getElementById('contentCooking');
@@ -39,3 +31,5 @@ document.getElementById('toggleButtonFood').addEventListener('click', function()
     content.classList.toggle('hidden');
     button.classList.toggle('rotate');
 });
+
+
