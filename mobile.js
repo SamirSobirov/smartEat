@@ -21,3 +21,12 @@ document.getElementById('toggleButtonCooking').addEventListener('click', functio
     button.classList.toggle('rotate');
 });
 
+
+
+document.getElementById('toggleButtonDish').addEventListener('click', function() {
+    var contentDish = document.getElementById('contentDish');
+    var toggleButton = document.getElementById('toggleButtonDish').querySelector('img');
+    
+    contentDish.classList.toggle('hidden');
+    toggleButton.classList.toggle('rotated');
+});

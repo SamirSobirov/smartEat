@@ -496,27 +496,37 @@
 
 
 
-   <section class="p-4 mt-12 pr-4 w-[450px] h-full shadow-md mx-auto rounded-xl items-center justify-center">
-    <div class="flex justify-between pt-8 pl-4 pr-4">
-        <h1 class="font-bold">DISH PREFERENCES</h1>
-        <button id="toggleButtonDish">
-            <img src="./images/icons/arrow-up.svg" alt="">
-        </button>
-    </div>
-    <div id="contentDish" class="content">
-        <img class="mt-4" src="./images/img/back_3.svg" alt="back_3">
-        <p class="font-normal">Snacks</p>
-        <p class="text-normal text-gray-500">You chose no snacks</p>
-
-        <div class="items-center text-center justify-center">
-            <p class="items-center text-center pt-6 font-medium">Want to make your plan more diverse?</p>
-
-            <button class="mt-[7px] rounded-3xl border-2 py-[4px] px-[150px] border-green-500">
-                <p class="font-bold text-green-500"> Add more <br> dishes </p>
+    <section class="p-4 mt-12 pr-4 w-[450px] h-full shadow-md mx-auto rounded-xl items-center justify-center">
+        <div class="flex justify-between pt-8 pl-4 pr-4">
+            <h1 class="font-bold">DISH PREFERENCES</h1>
+            <button id="toggleButtonDish">
+                <img src="./images/icons/arrow-up.svg" alt="">
             </button>
         </div>
-    </div>
-</section>
+        <div id="contentDish" class="content">
+            <img class="mt-4" src="./images/img/back_3.svg" alt="back_3">
+            <p class="font-normal">Snacks</p>
+            <p class="text-normal text-gray-500">You chose no snacks</p>
+    
+            <div class="items-center text-center justify-center">
+                <p class="items-center text-center pt-6 font-medium">Want to make your plan more diverse?</p>
+    
+                <button class="mt-[7px] rounded-3xl border-2 py-[4px] px-[150px] border-green-500">
+                    <p class="font-bold text-green-500"> Add more <br> dishes </p>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('toggleButtonDish').addEventListener('click', function() {
+            var contentDish = document.getElementById('contentDish');
+            var toggleButton = document.getElementById('toggleButtonDish').querySelector('img');
+            
+            contentDish.classList.toggle('hidden');
+            toggleButton.classList.toggle('rotated');
+        });
+    </script>
 
     <script src="./mobile.js"></script>
 
