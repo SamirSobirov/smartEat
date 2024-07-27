@@ -24,3 +24,21 @@
     height: 40px;
     padding: 10px;
 }
+
+
+
+#content {
+    max-height: 1000px; /* Adjust based on your content height */
+    transition: max-height 0.5s ease-out;
+}
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease-out;
+}
+
+.hidden {
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}

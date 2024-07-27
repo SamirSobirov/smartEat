@@ -12,19 +12,20 @@
 </head>
 
 <body>
+   
+
 
     <section class="p-4 pr-4 w-[450px] h-full shadow-md mx-auto rounded-xl items-center justify-center">
-
         <div class="flex justify-between pt-8 pl-4 pr-4">
             <h1 class="font-bold">FOOD PREFERENCES</h1>
-            <img src="./images/icons/arrow-up.svg" alt="">
+            <button id="toggleButton">
+                <img src="./images/icons/arrow-up.svg" alt="">
+            </button>
         </div>
 
 
-
-
+        <div id="content" class="pt-4">
         <img src="./images/img/back_1.svg" alt="">
-
 
         <p class="font-semibold text-sm">What carbohydrates do you want in your meal plan?<br>
             (We don’t make plans without carbohydrates.)</p>
@@ -252,7 +253,7 @@
                     <input type="checkbox" class="w-6 h-6  mr-2">Agave
                 </label>
                 <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Peanut butter  
+                    <input type="checkbox" class="w-6 h-6  mr-2">Peanut butter
                 </label>
                 <label class="flex items-center">
                     <input type="checkbox" class="w-6 h-6  mr-2">Condensed milk
@@ -351,7 +352,7 @@
                 <label class="flex items-center">
                     <input type="checkbox" class="w-6 h-6  mr-2">Sunflower oil
                 </label>
-              
+
             </div>
             <p class="font-semibold text-sm pt-8">What soy products do you want in your meal plan?
 
@@ -365,7 +366,7 @@
                 <label class="flex items-center">
                     <input type="checkbox" class="w-6 h-6  mr-2">Soy meat
                 </label>
-              
+
             </div>
 
             <p class="font-semibold text-sm pt-8">What toppings/spices do you want?
@@ -430,6 +431,8 @@
                 <label class="flex items-center">
                     <input type="checkbox" class="w-6 h-6  mr-2">Protein bar (20g protein ps)
                 </label>
+
+                <div id="content" class="pt-4">
     </section>
 
 
@@ -445,30 +448,30 @@
         <img src="./images/img/back_2.svg" alt="">
 
 
-        
+
         <p class="font-semibold text-sm">How many days in a row do you want to eat the same
-            meal?   <br>
+            meal? <br>
             (Your answer will affect how often you need to cook.)
-            </p>
+        </p>
 
         <div class="food_box">
             <div class="food_item">
                 <p>Breakfast</p>
-                <input type="text"  placeholder="Select a value …" >
-                
+                <input type="text" placeholder="Select a value …">
+
             </div>
             <div class="food_item">
                 <p>Lunch</p>
-                <input type="text"  placeholder="Select a value …" >
+                <input type="text" placeholder="Select a value …">
             </div>
             <div class="food_item">
                 <p>Dinner</p>
-                <input type="text"  placeholder="Select a value …"  >
+                <input type="text" placeholder="Select a value …">
             </div>
-           
+
         </div>
         <p class="font-semibold text-sm">Which snacks do you want?
-          </p>
+        </p>
 
 
         <div class=" flex flex-col space-y-2 pt-8 gap-4">
@@ -487,37 +490,41 @@
         </div>
 
 
-</section>
+    </section>
 
 
 
 
 
-<!-- sdelay chort -->
-<section class="p-4 mt-12 pr-4 w-[450px] h-full shadow-md mx-auto rounded-xl items-center justify-center">
-    <div class="flex justify-between pt-8 pl-4 pr-4">
-        <h1 class="font-bold">FOOD PREFERENCES</h1>
-        <img src="./images/icons/arrow-up.svg" alt="">
-    </div>
+    <!-- sdelay chort -->
+    <section class="p-4 mt-12 pr-4 w-[450px] h-full shadow-md mx-auto rounded-xl items-center justify-center">
+        <div class="flex justify-between pt-8 pl-4 pr-4">
+            <h1 class="font-bold">FOOD PREFERENCES</h1>
+            <img src="./images/icons/arrow-up.svg" alt="">
+        </div>
 
 
-    <img class="mt-4" src="./images/img/back_3.svg" alt="back_3">
+        <img class="mt-4" src="./images/img/back_3.svg" alt="back_3">
 
-    <p class="font-normal ">Snacks</p>
-    <p class="text-normal text-gray-500">You chose no snacks</p>
+        <p class="font-normal ">Snacks</p>
+        <p class="text-normal text-gray-500">You chose no snacks</p>
 
-    <div class="items-center text-center justify-center">
-    <p class="items-center text-center pt-6 font-medium">Want to make your plan more diverse?</p>
+        <div class="items-center text-center justify-center">
+            <p class="items-center text-center pt-6 font-medium">Want to make your plan more diverse?</p>
 
-    <button class="mt-[7px] rounded-3xl border-2 py-[4px] px-[150px] border-green-500" ><p class="font-bold text-green-500"> Add more <br> dishes </p></button>
+            <button class="mt-[7px] rounded-3xl border-2 py-[4px] px-[150px] border-green-500">
+                <p class="font-bold text-green-500"> Add more <br> dishes </p>
+            </button>
 
-</div>
+        </div>
 
 
-    
 
-</section>
 
+    </section>
+
+
+    <script src="./mobile.js"></script>
 
 </body>
 
