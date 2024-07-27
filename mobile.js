@@ -4,3 +4,20 @@ document.getElementById('toggleButton').addEventListener('click', function() {
     content.classList.toggle('hidden');
     button.classList.toggle('rotate');
 });
+
+
+
+document.getElementById('toggleButtonFood').addEventListener('click', function() {
+    const content = document.getElementById('contentFood');
+    const button = document.getElementById('toggleButtonFood');
+    content.classList.toggle('hidden');
+    button.classList.toggle('rotate');
+});
+
+document.getElementById('toggleButtonCooking').addEventListener('click', function() {
+    const content = document.getElementById('contentCooking');
+    const button = document.getElementById('toggleButtonCooking');
+    content.classList.toggle('hidden');
+    button.classList.toggle('rotate');
+});
+

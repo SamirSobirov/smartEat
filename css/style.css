@@ -28,7 +28,7 @@
 
 
 #content {
-    max-height: 1000px; /* Adjust based on your content height */
+    max-height: 100%; 
     transition: max-height 0.5s ease-out;
 }
 .rotate {
