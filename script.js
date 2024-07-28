@@ -1,5 +1,7 @@
 
 
+
+
 function updateMessage() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     let checkedCount = 0;
@@ -43,6 +45,32 @@ function updateMessages() {
     }
 }
 
+
+
+
+
+
+//kolichestvo 2 button
+function updateMessages3() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    let checkedCount = 0;
+
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            checkedCount++;
+        }
+    });
+
+    const message = document.getElementById('messages3');
+    const remaining = 2 - checkedCount;
+
+    if (remaining > 0) {
+        message.textContent = `Выберите еще хотя бы ${remaining} элемента`;
+    } else {
+        message.textContent = "Достаточное количество элементов выбрано";
+
+    }
+}
 
 
 
@@ -127,6 +155,15 @@ function showMore7() {
 
 function showMore8() {
     let moreOptions = document.getElementById('more-options8');
+    if (moreOptions.classList.contains('hidden')) {
+        moreOptions.classList.remove('hidden');
+    } else {
+        moreOptions.classList.add('hidden');
+    }
+}
+
+function showMore9() {
+    let moreOptions = document.getElementById('more-options9');
     if (moreOptions.classList.contains('hidden')) {
         moreOptions.classList.remove('hidden');
     } else {
