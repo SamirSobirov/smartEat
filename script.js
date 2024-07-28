@@ -172,3 +172,14 @@ function showMore9() {
 }
 
 
+function showMore10() {
+    let moreOptions = document.getElementById('more-options10');
+    if (moreOptions.classList.contains('hidden')) {
+        moreOptions.classList.remove('hidden');
+    } else {
+        moreOptions.classList.add('hidden');
+    }
+}
+
+
+
