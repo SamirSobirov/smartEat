@@ -1510,12 +1510,78 @@
 			<div class="items-center text-center justify-center">
 				<p class="items-center text-center pt-6 font-medium">Хотите сделать ваш план разнообразнее?</p>
 
-				<button class="mt-[7px] rounded-3xl border-[1px] py-[16px] px-[100px] border-green-500">
+				<button class="mt-[7px] rounded-3xl border-[1px] py-[16px] px-[100px] border-green-500 " onclick="openModal()">
 					<p class="font-bold text-green-500 flex whitespace-nowrap"> Добавить ещё блюда </p>
 				</button>
 			</div>
 		</div>
 	</section>
+
+
+
+
+
+	<div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
+
+<div id="modal" class="fixed inset-0 flex items-center justify-center hidden" onclick="closeModal()">
+    <div id="modalContent" class="bg-white w-[420px] p-6 rounded-xl shadow-xl" onclick="event.stopPropagation()">
+        <div class="px-6 py-8">
+            <p class="text-2xl font-bold">Какие блюда вы хотите <br> добавить?</p>
+            <p class="text-xl pt-4 font-bold">Завтрак</p>
+            <div class="flex flex-col space-y-2 pt-4 gap-4">
+                <div>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="w-6 h-6 mr-2">Сырники
+                    </label>
+                    <p class="text-sm">В план будут добавлены: Творог, Белок</p>
+                </div>
+                <div>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="w-6 h-6 mr-2">Запеканка творожная
+                    </label>
+                    <p class="text-sm">В план будут добавлены: Творог, Белок, Желток</p>
+                </div>
+                <div>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="w-6 h-6 mr-2">Яичница/омлет с зеленью
+                    </label>
+                    <p class="text-sm">В план будут добавлены: Белок, Зелень (укроп, петрушка и др.)</p>
+                </div>
+                <div>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="w-6 h-6 mr-2">Яичница/омлет с помидором
+                    </label>
+                    <p class="text-sm">В план будут добавлены: Белок, Помидоры</p>
+                </div>
+                <div>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="w-6 h-6 mr-2">Творог
+                    </label>
+                    <p class="text-sm">В план будут добавлены: Творог</p>
+                </div>
+            </div>
+            <div class="items-center text-center justify-center pt-4">
+                <button class="mt-[7px] rounded-3xl bg-green-500 py-[16px] px-[100px] border-green-500">
+                    <p class="font-bold text-white flex whitespace-nowrap">Добавить блюда</p>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openModal() {
+        document.getElementById('overlay').classList.remove('hidden');
+        document.getElementById('modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+        document.getElementById('overlay').classList.add('hidden');
+        document.getElementById('modal').classList.add('hidden');
+    }
+</script>
+
+	
 
 
 	<script src="./toggles.js"></script>
