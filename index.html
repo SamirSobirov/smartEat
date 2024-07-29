@@ -1138,7 +1138,6 @@
 
 
             <p class="font-semibold text-sm pt-8">Какие фрукты вы едите? (учитывайте сезонность)
-
             </p>
 
 
@@ -1217,6 +1216,10 @@
                         document.getElementById('showMoreButton11').style.display = 'none';
                     }
                 }
+
+
+
+                
             </script>
 
 
@@ -1255,6 +1258,10 @@
                 </label>
             </div>
 
+
+
+
+           
 
 
             <p class="font-semibold text-sm pt-8">Едите ли вы что-то из соевых продуктов?
@@ -1314,10 +1321,28 @@
                 </label>
             </div>
 
-            <button class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore10()">
+            <button id="showMoreButton12" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore10()">
                 <img src="./images/icons/more_icon.svg" alt="">
                 <p class="text-gray-500">больше</p>
             </button>
+
+            <script>
+                let currentSection12 = 0;
+        
+                function showMore10() {
+                    if (currentSection12 === 0) {
+                        document.getElementById('more-options10').classList.remove('hidden');
+                        currentSection12++;
+                    } if (currentSection12 >= 2) {
+                        document.getElementById('showMoreButton12').style.display = 'none';
+                    }
+                }
+
+
+
+                
+            </script>
+
 
 
 
