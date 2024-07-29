@@ -734,10 +734,91 @@
                 </label>
             </div>
 
-            <button class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore4()">
+
+
+            <div id="more-options5-2" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Масло сливочное
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Сыр нежирный (до 20%)
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Сыр обычный (40%)
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Брынза
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Сыр козий
+                </label>
+            </div>
+
+
+            <div id="more-options5-3" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Сыр Сулугуни
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Фета
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Моцарелла
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Рикотта
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Сыр творожный
+                </label>
+            </div>
+
+
+
+            <div id="more-options5-4" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Сыр филадельфия
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Ацидофилин
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Мацони
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Айран
+                </label>
+            </div>
+
+            <button id="showMoreButton5" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore4()">
                 <img src="./images/icons/more_icon.svg" alt="">
                 <p class="text-gray-500">больше</p>
             </button>
+
+
+            <script>
+                let currentSection5 = 0;
+        
+                function showMore4() {
+                    if (currentSection5 === 0) {
+                        document.getElementById('more-options4').classList.remove('hidden');
+                        currentSection5++;
+                    } else if (currentSection5 === 1) {
+                        document.getElementById('more-options5-2').classList.remove('hidden');
+                        currentSection5++;
+                    }   else if (currentSection5 === 2) {
+                        document.getElementById('more-options5-3').classList.remove('hidden');
+                        currentSection5++;
+                    }   else if (currentSection5 === 3) {
+                        document.getElementById('more-options5-4').classList.remove('hidden');
+                        currentSection5++;
+                    }  
+                    if (currentSection5 >= 4) {
+                        document.getElementById('showMoreButton5').style.display = 'none';
+                    }
+                }
+            </script>
+
 
 
 
@@ -804,10 +885,27 @@
             </div>
 
 
-            <button class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore5()">
+
+            <button id="showMoreButton6" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore5()">
                 <img src="./images/icons/more_icon.svg" alt="">
                 <p class="text-gray-500">больше</p>
             </button>
+
+            <script>
+                let currentSection6 = 0;
+        
+                function showMore5() {
+                    if (currentSection6 === 0) {
+                        document.getElementById('more-options5').classList.remove('hidden');
+                        currentSection6++;
+                    } 
+                    if (currentSection6 >= 1) {
+                        document.getElementById('showMoreButton6').style.display = 'none';
+                    }
+                }
+            </script>
+
+          
 
 
 
@@ -858,10 +956,27 @@
                 </label>
             </div>
 
-            <button class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore6()">
+            <button id="showMoreButton7" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore6()">
                 <img src="./images/icons/more_icon.svg" alt="">
                 <p class="text-gray-500">больше</p>
             </button>
+
+
+            
+            <script>
+                let currentSection7 = 0;
+        
+                function showMore6() {
+                    if (currentSection7 === 0) {
+                        document.getElementById('more-options6').classList.remove('hidden');
+                        currentSection7++;
+                    } if (currentSection7 >= 1) {
+                        document.getElementById('showMoreButton7').style.display = 'none';
+                    }
+                }
+            </script>
+
+
 
 
 
@@ -902,11 +1017,23 @@
                 </label>
             </div>
 
-            <button class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore7()">
+            <button id="showMoreButton8" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore7()">
                 <img src="./images/icons/more_icon.svg" alt="">
                 <p class="text-gray-500">больше</p>
             </button>
 
+            <script>
+                let currentSection8 = 0;
+        
+                function showMore7() {
+                    if (currentSection8 === 0) {
+                        document.getElementById('more-options7').classList.remove('hidden');
+                        currentSection8++;
+                    } if (currentSection8 >= 1) {
+                        document.getElementById('showMoreButton8').style.display = 'none';
+                    }
+                }
+            </script>
 
 
 

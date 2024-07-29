@@ -109,44 +109,44 @@ function updateMessages3() {
 
 
 
-function showMore4() {
-    let moreOptions = document.getElementById('more-options4');
-    if (moreOptions.classList.contains('hidden')) {
-        moreOptions.classList.remove('hidden');
-    } else {
-        moreOptions.classList.add('hidden');
-    }
-}
+// function showMore4() {
+//     let moreOptions = document.getElementById('more-options4');
+//     if (moreOptions.classList.contains('hidden')) {
+//         moreOptions.classList.remove('hidden');
+//     } else {
+//         moreOptions.classList.add('hidden');
+//     }
+// }
 
 
-function showMore5() {
-    let moreOptions = document.getElementById('more-options5');
-    if (moreOptions.classList.contains('hidden')) {
-        moreOptions.classList.remove('hidden');
-    } else {
-        moreOptions.classList.add('hidden');
-    }
-}
+// function showMore5() {
+//     let moreOptions = document.getElementById('more-options5');
+//     if (moreOptions.classList.contains('hidden')) {
+//         moreOptions.classList.remove('hidden');
+//     } else {
+//         moreOptions.classList.add('hidden');
+//     }
+// }
 
 
-function showMore6() {
-    let moreOptions = document.getElementById('more-options6');
-    if (moreOptions.classList.contains('hidden')) {
-        moreOptions.classList.remove('hidden');
-    } else {
-        moreOptions.classList.add('hidden');
-    }
-}
+// function showMore6() {
+//     let moreOptions = document.getElementById('more-options6');
+//     if (moreOptions.classList.contains('hidden')) {
+//         moreOptions.classList.remove('hidden');
+//     } else {
+//         moreOptions.classList.add('hidden');
+//     }
+// }
 
 
-function showMore7() {
-    let moreOptions = document.getElementById('more-options7');
-    if (moreOptions.classList.contains('hidden')) {
-        moreOptions.classList.remove('hidden');
-    } else {
-        moreOptions.classList.add('hidden');
-    }
-}
+// function showMore7() {
+//     let moreOptions = document.getElementById('more-options7');
+//     if (moreOptions.classList.contains('hidden')) {
+//         moreOptions.classList.remove('hidden');
+//     } else {
+//         moreOptions.classList.add('hidden');
+//     }
+// }
 
 
 function showMore8() {
