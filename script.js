@@ -87,14 +87,14 @@ function updateMessages3() {
 
 
 
-function showMore2() {
-    let moreOptions = document.getElementById('more-options2');
-    if (moreOptions.classList.contains('hidden')) {
-        moreOptions.classList.remove('hidden');
-    } else {
-        moreOptions.classList.add('hidden');
-    }
-}
+// function showMore2() {
+//     let moreOptions = document.getElementById('more-options2');
+//     if (moreOptions.classList.contains('hidden')) {
+//         moreOptions.classList.remove('hidden');
+//     } else {
+//         moreOptions.classList.add('hidden');
+//     }
+// }
 
 
 function showMore3() {

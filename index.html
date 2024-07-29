@@ -282,18 +282,94 @@
                 <label class="flex items-center">
                     <input type="checkbox" class="w-6 h-6  mr-2">Говядина
                 </label>
+             
+            </div>
+
+
+
+            <div id="more-options3-2" class=" flex flex-col space-y-2 pt-8 gap-4 hidden">
                 <label class="flex items-center">
                     <input type="checkbox" class="w-6 h-6  mr-2">Телятина
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Свинина
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Баранина
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Кролик
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Говяжья печень
+                </label>
+            </div>
+
+            <div id="more-options3-3" class=" flex flex-col space-y-2 pt-8 gap-4 hidden">
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Куриная печень
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Куриные желудочки
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Куриные сердечки
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Утка
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Лосятина
                 </label>
             </div>
 
 
-            <button class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore2()">
+            <div id="more-options3-4" class=" flex flex-col space-y-2 pt-8 gap-4 hidden">
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Оленина
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Кабан
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Косуля
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Конина
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Нутрия
+                </label>
+            </div>
+
+
+            <button id="showMoreButton3" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore2()">
                 <img src="./images/icons/more_icon.svg" alt="">
                 <p class="text-gray-500">больше</p>
             </button>
 
-
+            <script>
+                let currentSection3 = 0;
+        
+                function showMore2() {
+                    if (currentSection3 === 0) {
+                        document.getElementById('more-options2').classList.remove('hidden');
+                        currentSection3++;
+                    } else if (currentSection3 === 1) {
+                        document.getElementById('more-options3-2').classList.remove('hidden');
+                        currentSection3++;
+                    }   else if (currentSection3 === 2) {
+                        document.getElementById('more-options3-3').classList.remove('hidden');
+                        currentSection3++;
+                    }   else if (currentSection3 === 3) {
+                        document.getElementById('more-options3-4').classList.remove('hidden');
+                        currentSection3++;
+                    }  
+                    if (currentSection3 >= 4) {
+                        document.getElementById('showMoreButton3').style.display = 'none';
+                    }
+                }
+            </script>
 
 
 
