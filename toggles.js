@@ -14,6 +14,14 @@ document.getElementById('toggleButtonFood').addEventListener('click', function()
     button.classList.toggle('rotate');
 });
 
+
+document.getElementById('toggleButtonFood2').addEventListener('click', function() {
+    const content = document.getElementById('contentFood2');
+    const button = document.getElementById('toggleButtonFood2');
+    content.classList.toggle('hidden');
+    button.classList.toggle('rotate');
+});
+
 document.getElementById('toggleButtonCooking').addEventListener('click', function() {
     const content = document.getElementById('contentCooking');
     const button = document.getElementById('toggleButtonCooking');
