@@ -206,9 +206,10 @@
                 <label class="flex items-center">
                     <input type="checkbox" class="w-6 h-6 mr-2">Мука пшеничная цельнозерновая
                 </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2">Мука рисовая
-                </label>
+            </div>
+
+
+            <div id="more-options2-2" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
                 <label class="flex items-center">
                     <input type="checkbox" class="w-6 h-6 mr-2">Мука овсяная
                 </label>
@@ -220,13 +221,27 @@
                 </label>
             </div>
 
-            <button class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore1()">
+
+            <button id="showMoreButton2" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore1()">
                 <img src="./images/icons/more_icon.svg" alt="">
                 <p class="text-gray-500">больше</p>
             </button>
 
             <script>
-
+                let currentSection2 = 0;
+        
+                function showMore1() {
+                    if (currentSection2 === 0) {
+                        document.getElementById('more-options').classList.remove('hidden');
+                        currentSection2++;
+                    } else if (currentSection2 === 1) {
+                        document.getElementById('more-options2-2').classList.remove('hidden');
+                        currentSection2++;
+                    }  
+                    if (currentSection2 >= 2) {
+                        document.getElementById('showMoreButton2').style.display = 'none';
+                    }
+                }
             </script>
 
 

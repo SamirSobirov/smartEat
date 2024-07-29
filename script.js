@@ -1,7 +1,3 @@
-
-
-
-
 function updateMessage() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     let checkedCount = 0;
@@ -79,14 +75,14 @@ function updateMessages3() {
 //     moreItems.classList.toggle('hidden');
 // }
 
-function showMore1() {
-    let moreOptions = document.getElementById('more-options');
-    if (moreOptions.classList.contains('hidden')) {
-        moreOptions.classList.remove('hidden');
-    } else {
-        moreOptions.classList.add('hidden');
-    }
-}
+// function showMore1() {
+//     let moreOptions = document.getElementById('more-options');
+//     if (moreOptions.classList.contains('hidden')) {
+//         moreOptions.classList.remove('hidden');
+//     } else {
+//         moreOptions.classList.add('hidden');
+//     }
+// }
 
 
 
