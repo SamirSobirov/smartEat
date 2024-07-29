@@ -27,7 +27,7 @@
 
 .content {
     transition: max-height 0.5s ease, opacity 0.5s ease;
-    max-height: 500px; /* or any initial height that fits the content */
+    max-height: 100%; /* or any initial height that fits the content */
     overflow: hidden;
     opacity: 1;
 }
