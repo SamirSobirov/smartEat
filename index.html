@@ -2,1523 +2,1524 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Document</title>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 
 
 
-    <section class="p-4 pr-4 w-[450px] h-full shadow-md mx-auto rounded-xl items-center justify-center">
-        <div class="flex justify-between pt-8 pl-4 pr-4">
-            <h1 class="font-bold">ПРЕДПОЧТЕНИЯ В ЕДЕ</h1>
-            <button id="toggleButton">
-                <img src="./images/icons/arrow-up.svg" alt="">
-            </button>
-        </div>
-
-
-        <div id="content">
-
-            <img src="./images/img/back_1.svg" alt="">
-
-            <p class="font-semibold text-sm">Какие крупы/гарниры вы едите? (планы без круп не составляются)</p>
-
-            <p id="message" class="text-red-500 text-xs text-right pt-2">Выберите еще хотя бы 2 элемента</p>
-            <div class="flex flex-col space-y-2 pt-8 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Гречка
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Рис белый
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()">Овсянка
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Пшенка
-                </label>
-            </div>
-
-
-            <div id="moreItems" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Перловка
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Макароны из твердых сортов пшеницы
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Чечевица
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Картофель
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Булгур
-                </label>
-            </div>
-
-
-         
-    <div id="moreItems1_2" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Кускус
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Рис бурый
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Рис дикий
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Горох сушеный
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Нут
-        </label>
-    </div>
-
-
-
-    <div id="moreItems1_3" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Горох маш
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Киноа
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Кукурузная крупа
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Ячневая крупа
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Манная крупа
-        </label>
-    </div>
-
-    <div id="moreItems1_4" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Батат
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Полба
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Льняная каша
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Макароны без глютена
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Ржаная крупа
-        </label>
-    </div>
-
-    <div id="moreItems1_5" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Пшеничная крупа
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Ячменная крупа
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Гречневая лапша
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Рисовая лапша
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Пшеничная лапша
-        </label>
-        <label class="flex items-center">
-            <input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Фунчоза
-        </label>
-    </div>
-
-    <button id="showMoreButton" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore()">
-        <img src="./images/icons/more_icon.svg" alt="">
-        <p class="text-gray-500">больше</p>
-    </button>
-
-    <script>
-        let currentSection = 0;
-
-        function showMore() {
-            if (currentSection === 0) {
-                document.getElementById('moreItems').classList.remove('hidden');
-                currentSection++;
-            } else if (currentSection === 1) {
-                document.getElementById('moreItems1_2').classList.remove('hidden');
-                currentSection++;
-            }  else if (currentSection === 2) {
-                document.getElementById('moreItems1_3').classList.remove('hidden');
-                currentSection++;
-            } else if (currentSection === 3) {
-                document.getElementById('moreItems1_4').classList.remove('hidden');
-                currentSection++;
-            } 
-
-            if (currentSection >= 4) {
-                document.getElementById('showMoreButton').style.display = 'none';
-            }
-        }
-    </script>
-
-
-
-            <p class="font-semibold text-sm pt-8">Какие мучные изделия вы едите?</p>
-            <div class="flex flex-col space-y-2 pt-8 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2">Цельнозерновой хлеб
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2">Хлебцы (ржаные; мультизлаковые и т.п.)
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2">Хлеб ржаной/черный
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2">Лаваш бездрожжевой
-                </label>
-            </div>
-
-
-
-            <div id="more-options" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2">Тортилья
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2">Хлеб пшеничный
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2">Хлеб без глютена
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2">Мука пшеничная цельнозерновая
-                </label>
-            </div>
-
-
-            <div id="more-options2-2" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2">Мука овсяная
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2">Мука кокосовая
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6 mr-2">Мука миндальная
-                </label>
-            </div>
-
-
-            <button id="showMoreButton2" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore1()">
-                <img src="./images/icons/more_icon.svg" alt="">
-                <p class="text-gray-500">больше</p>
-            </button>
-
-            <script>
-                let currentSection2 = 0;
-        
-                function showMore1() {
-                    if (currentSection2 === 0) {
-                        document.getElementById('more-options').classList.remove('hidden');
-                        currentSection2++;
-                    } else if (currentSection2 === 1) {
-                        document.getElementById('more-options2-2').classList.remove('hidden');
-                        currentSection2++;
-                    }  
-                    if (currentSection2 >= 2) {
-                        document.getElementById('showMoreButton2').style.display = 'none';
-                    }
-                }
-            </script>
-
-
-
-
-            <p class="font-semibold text-sm pt-8">Что из списка ниже есть в вашем рационе (мясо, <br> птица)?</p>
-
-
-            <div class=" flex flex-col space-y-2 pt-8 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Куриная грудка
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Куриное бедро
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Куриная голень
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Фарш из филе курицы
-                </label>
-            </div>
-
-
-            <div id="more-options2" class=" flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Грудка индейки
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Бедро индейки
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Голень индейки
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Фарш из индейки
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Говядина
-                </label>
-             
-            </div>
-
-
-
-            <div id="more-options3-2" class=" flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Телятина
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Свинина
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Баранина
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Кролик
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Говяжья печень
-                </label>
-            </div>
-
-            <div id="more-options3-3" class=" flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Куриная печень
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Куриные желудочки
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Куриные сердечки
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Утка
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Лосятина
-                </label>
-            </div>
-
-
-            <div id="more-options3-4" class=" flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Оленина
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Кабан
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Косуля
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Конина
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Нутрия
-                </label>
-            </div>
-
-
-            <button id="showMoreButton3" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore2()">
-                <img src="./images/icons/more_icon.svg" alt="">
-                <p class="text-gray-500">больше</p>
-            </button>
-
-            <script>
-                let currentSection3 = 0;
-        
-                function showMore2() {
-                    if (currentSection3 === 0) {
-                        document.getElementById('more-options2').classList.remove('hidden');
-                        currentSection3++;
-                    } else if (currentSection3 === 1) {
-                        document.getElementById('more-options3-2').classList.remove('hidden');
-                        currentSection3++;
-                    }   else if (currentSection3 === 2) {
-                        document.getElementById('more-options3-3').classList.remove('hidden');
-                        currentSection3++;
-                    }   else if (currentSection3 === 3) {
-                        document.getElementById('more-options3-4').classList.remove('hidden');
-                        currentSection3++;
-                    }  
-                    if (currentSection3 >= 4) {
-                        document.getElementById('showMoreButton3').style.display = 'none';
-                    }
-                }
-            </script>
-
-
-            <p class="font-semibold text-sm pt-8">Какие бобовые вы едите?</p>
-
-
-            <div class=" flex flex-col space-y-2 pt-8 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Кукуруза
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Горошек
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Фасоль
-                </label>
-            </div>
-
-
-
-            <p class="font-semibold text-sm pt-8">Что из списка ниже есть в вашем рационе (рыба, морепродукты)?</p>
-
-
-            <div class=" flex flex-col space-y-2 pt-8 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Тилапия
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Судак
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Дорадо
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Карп
-                </label>
-            </div>
-
-
-            <div id="more-options3" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Окунь
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Треска
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Минтай
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Семга
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Лосось
-                </label>
-              
-            </div>
-
-
-
-
-            <div id="more-options4-2" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Горбуша
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Форель
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Тунец конс.
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Креветки
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Кальмары
-                </label>
-            </div>
-
-
-            <div id="more-options4-3" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Мидии
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Коктейль из морепродуктов
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Икра минтаевая
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Икра щучья
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Икра красная
-                </label>
-            </div>
-
-
-            <div id="more-options4-4" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Красная рыба с/с
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Амур
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Белуга
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Голец
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Гребешки
-                </label>
-            </div>
-
-
-            <div id="more-options4-5" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Дори
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Желтохвост/лакедра
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Зубатка синяя
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Камбала
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Карась
-                </label>
-            </div>
-
-
-
-            <div id="more-options4-6" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Кета
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Кефаль
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Кижуч
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Корюшка
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Крабы
-                </label>
-            </div>
-
-
-            <div id="more-options4-7" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Ленок
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Лещ
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Лимонелла
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Мойва
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Морской язык
-                </label>
-            </div>
-
-
-            <div id="more-options4-8" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Муксун
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Навага
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Нерка
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Осетр
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Осьминоги
-                </label>
-            </div>
-
-
-
-            <div id="more-options4-9" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Палтус
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Пангасиус
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Пеленгас
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Пелядь
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Пикша
-                </label>
-            </div>
-
-
-            
-            <div id="more-options4-10" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Путассу
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Ряпушка
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Сазан
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Сардина
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Севрюга
-                </label>
-            </div>
-
-
-            <div id="more-options4-11" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Сибас
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Скумбрия
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Сом
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Терпуг
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Толстолобик
-                </label>
-            </div>
-
-
-            <div id="more-options4-12" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Тунец
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Хариус
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Хек
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Чир/щокур
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Щука
-                </label>
-            </div>
-
-            <button id="showMoreButton4" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore3()">
-                <img src="./images/icons/more_icon.svg" alt="">
-                <p class="text-gray-500">больше</p>
-            </button>
-
-            <script>
-                let currentSection4 = 0;
-        
-                function showMore3() {
-                    if (currentSection4 === 0) {
-                        document.getElementById('more-options3').classList.remove('hidden');
-                        currentSection4++;
-                    } else if (currentSection4 === 1) {
-                        document.getElementById('more-options4-2').classList.remove('hidden');
-                        currentSection4++;
-                    }   else if (currentSection4 === 2) {
-                        document.getElementById('more-options4-3').classList.remove('hidden');
-                        currentSection4++;
-                    }   else if (currentSection4 === 3) {
-                        document.getElementById('more-options4-4').classList.remove('hidden');
-                        currentSection4++;
-                    }   else if (currentSection4 === 4) {
-                        document.getElementById('more-options4-5').classList.remove('hidden');
-                        currentSection4++;
-                    }  else if (currentSection4 === 5) {
-                        document.getElementById('more-options4-6').classList.remove('hidden');
-                        currentSection4++;
-                    }    else if (currentSection4 === 6) {
-                        document.getElementById('more-options4-7').classList.remove('hidden');
-                        currentSection4++;
-                    }   else if (currentSection4 === 7) {
-                        document.getElementById('more-options4-8').classList.remove('hidden');
-                        currentSection4++;
-                    }   else if (currentSection4 === 8) {
-                        document.getElementById('more-options4-9').classList.remove('hidden');
-                        currentSection4++;
-                    }   else if (currentSection4 === 9) {
-                        document.getElementById('more-options4-10').classList.remove('hidden');
-                        currentSection4++;
-                    }   else if (currentSection4 === 10) {
-                        document.getElementById('more-options4-11').classList.remove('hidden');
-                        currentSection4++;
-                    }   else if (currentSection4 === 11) {
-                        document.getElementById('more-options4-12').classList.remove('hidden');
-                        currentSection4++;
-                    }  
-                    if (currentSection4 >= 12) {
-                        document.getElementById("showMoreButton4").style.display = 'none';
-                    }
-                }
-            </script>
-
-
-
-
-            <p class="font-semibold text-sm pt-8">Какую молочку и кисломолочку вы едите?
-            </p>
-
-
-            <div class=" flex flex-col space-y-2 pt-8 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Молоко
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Молоко обезж.
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Молоко без лакт.
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Молоко растительное
-                </label>
-            </div>
-
-
-            <div id="more-options4" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Творог
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Сметана
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Йогурт
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Кефир
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Ряженка
-                </label>
-            </div>
-
-
-
-            <div id="more-options5-2" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Масло сливочное
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Сыр нежирный (до 20%)
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Сыр обычный (40%)
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Брынза
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Сыр козий
-                </label>
-            </div>
-
-
-            <div id="more-options5-3" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Сыр Сулугуни
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Фета
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Моцарелла
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Рикотта
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Сыр творожный
-                </label>
-            </div>
-
-
-
-            <div id="more-options5-4" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Сыр филадельфия
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Ацидофилин
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Мацони
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Айран
-                </label>
-            </div>
-
-            <button id="showMoreButton5" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore4()">
-                <img src="./images/icons/more_icon.svg" alt="">
-                <p class="text-gray-500">больше</p>
-            </button>
-
-
-            <script>
-                let currentSection5 = 0;
-        
-                function showMore4() {
-                    if (currentSection5 === 0) {
-                        document.getElementById('more-options4').classList.remove('hidden');
-                        currentSection5++;
-                    } else if (currentSection5 === 1) {
-                        document.getElementById('more-options5-2').classList.remove('hidden');
-                        currentSection5++;
-                    }   else if (currentSection5 === 2) {
-                        document.getElementById('more-options5-3').classList.remove('hidden');
-                        currentSection5++;
-                    }   else if (currentSection5 === 3) {
-                        document.getElementById('more-options5-4').classList.remove('hidden');
-                        currentSection5++;
-                    }  
-                    if (currentSection5 >= 4) {
-                        document.getElementById('showMoreButton5').style.display = 'none';
-                    }
-                }
-            </script>
-
-
-
-
-            <p class="font-semibold text-sm pt-8">Едите ли вы яйца?
-            </p>
-
-
-            <div class="pt-4 flex flex-col space-y-2 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Белок
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Желток
-                </label>
-            </div>
-
-
-
-
-            <p class="font-semibold text-sm pt-8">Едите ли вы орехи? Если да, то какие?
-            </p>
-
-
-            <div class="pt-4 flex flex-col space-y-2 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Миндаль
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Грецкий орех
-
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Фундук
-
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Пекан
-                </label>
-            </div>
-
-
-            <div id="more-options5" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Кешью
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Фисташки
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Арахис
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Кедровые орехи
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Макадамия
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Кокос
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Бразильский орех
-                </label>
-            </div>
-
-
-
-            <button id="showMoreButton6" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore5()">
-                <img src="./images/icons/more_icon.svg" alt="">
-                <p class="text-gray-500">больше</p>
-            </button>
-
-            <script>
-                let currentSection6 = 0;
-        
-                function showMore5() {
-                    if (currentSection6 === 0) {
-                        document.getElementById('more-options5').classList.remove('hidden');
-                        currentSection6++;
-                    } 
-                    if (currentSection6 >= 1) {
-                        document.getElementById('showMoreButton6').style.display = 'none';
-                    }
-                }
-            </script>
-
-          
-
-
-
-
-            <p class="font-semibold text-sm pt-8">Какие сухофрукты вам нравятся?
-            </p>
-
-
-            <div class="pt-4 flex flex-col space-y-2 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Курага
-
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Финики
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Изюм
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Чернослив
-                </label>
-            </div>
-
-
-
-            <div id="more-options6" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Инжир
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Дыня (сухофрукт)
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Яблоки сушеные
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Груши сушеные
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Вишня сушеная
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Манго сушеный
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Банан сушеный
-                </label>
-            </div>
-
-            <button id="showMoreButton7" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore6()">
-                <img src="./images/icons/more_icon.svg" alt="">
-                <p class="text-gray-500">больше</p>
-            </button>
-
-
-            
-            <script>
-                let currentSection7 = 0;
-        
-                function showMore6() {
-                    if (currentSection7 === 0) {
-                        document.getElementById('more-options6').classList.remove('hidden');
-                        currentSection7++;
-                    } if (currentSection7 >= 1) {
-                        document.getElementById('showMoreButton7').style.display = 'none';
-                    }
-                }
-            </script>
-
-
-
-
-
-
-            <p class="font-semibold text-sm pt-8">Что из списка сладкого ниже вы любите?
-            </p>
-
-
-            <div class="pt-4 flex flex-col space-y-2 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Мед
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Варенье
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Конфитюр/джем
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Джем zero
-                </label>
-            </div>
-
-
-
-            <div id="more-options7" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Сироп агавы
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Арахисовая паста
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Кокосовая паста
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Сгущенка
-                </label>
-            </div>
-
-            <button id="showMoreButton8" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore7()">
-                <img src="./images/icons/more_icon.svg" alt="">
-                <p class="text-gray-500">больше</p>
-            </button>
-
-            <script>
-                let currentSection8 = 0;
-        
-                function showMore7() {
-                    if (currentSection8 === 0) {
-                        document.getElementById('more-options7').classList.remove('hidden');
-                        currentSection8++;
-                    } if (currentSection8 >= 1) {
-                        document.getElementById('showMoreButton8').style.display = 'none';
-                    }
-                }
-            </script>
-
-
-
-            <p class="font-semibold text-sm pt-8">Какие овощи вы едите? (учитывайте сезонность)
-            </p>
-
-            <p class="text-red-500 text-xs text-right " id="messages">Выберите еще хотя бы 2 элемента</p>
-
-            <div class="pt-4 flex flex-col space-y-2  gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Помидоры
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Огурцы
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Перец сладкий
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Лук репчатый
-                </label>
-            </div>
-
-
-
-            <div id="more-options8" class="pt-4 flex flex-col space-y-2  gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Морковь
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Капуста белокочанная
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Листья салата
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Пекинская капуста
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Руккола
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Сельдерей
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Зелень (укроп, петрушка и
-                    др.)
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Розмарин
-                </label>
-            </div>
-
-
-            <div id="more-options8-2" class="pt-4 flex flex-col space-y-2  gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Морковь
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Капуста белокочанная
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Листья салата
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Пекинская капуста
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Руккола
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Сельдерей
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Зелень (укроп, петрушка и
-                    др.)
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Розмарин
-                </label>
-            </div>
-
-            <button id="showMoreButton9" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore8()">
-                <img src="./images/icons/more_icon.svg" alt="">
-                <p class="text-gray-500">больше</p>
-            </button>
-
-            <script>
-                let currentSection9 = 0;
-        
-                function showMore8() {
-                    if (currentSection9 === 0) {
-                        document.getElementById('more-options8').classList.remove('hidden');
-                        currentSection9++;
-                    } else if (currentSection9 >= 1) {
-                        document.getElementById('more-options8-2').style.display = 'none';
-                    } if (currentSection9 >= 2) {
-                        document.getElementById('showMoreButton9').style.display = 'none';
-                    }
-                }
-            </script>
-
-
-            <p class="font-semibold text-sm pt-8">Какие фрукты вы едите? (учитывайте сезонность)
-            </p>
-
-
-            <div class="pt-4 flex flex-col space-y-2 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Яблоко
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Груша
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Банан
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Мандарин
-                </label>
-            </div>
-
-
-            <div id="more-options11" class="pt-4 flex flex-col space-y-2 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Апельсин
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Киви
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Лимон
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Ягоды зам./свежие
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Вишня
-                </label>
-            </div>
-
-
-
-
-            <div id="more-options11-2" class="pt-4 flex flex-col space-y-2 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Виноград
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Слива
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Грейпфрут
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Гранат
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Вишня
-                </label>
-            </div>
-
-
-            <button id="showMoreButton11" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore11()">
-                <img src="./images/icons/more_icon.svg" alt="">
-                <p class="text-gray-500">больше</p>
-            </button>
-
-
-            <script>
-                let currentSection11  = 0;
-        
-                function showMore11() {
-                    if (currentSection11 === 0) {
-                        document.getElementById('more-options11').classList.remove('hidden');
-                        currentSection11++;
-                    } else if (currentSection11 >= 1) {
-                        document.getElementById('more-options11-2').style.display = 'none';
-                    } if (currentSection11 >= 2) {
-                        document.getElementById('showMoreButton11').style.display = 'none';
-                    }
-                }
-
-
-
-                
-            </script>
-
-
-
-            <p class="font-semibold text-sm pt-8">Какие соусы вам нравятся?
-            </p>
-
-
-            <div class="pt-4 flex flex-col space-y-2 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Томатная паста
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Соевый соус
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Хрен сливочный
-                </label>
-            </div>
-
-
-
-            <p class="font-semibold text-sm pt-8">Какие масла вы используете?
-            </p>
-            <p class="text-red-500 text-xs text-right " id="messages3">Выберите еще хотя бы 2 элемента</p>
-
-            <div class="pt-4 flex flex-col space-y-2 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages3()">Масло подсолнечное
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages3()">Масло олив.
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages3()">Масло льняное
-                </label>
-            </div>
-
-
-
-
-           
-
-
-            <p class="font-semibold text-sm pt-8">Едите ли вы что-то из соевых продуктов?
-
-            </p>
-
-
-            <div class="pt-4 flex flex-col space-y-2 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Тофу
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Соевое мясо
-                </label>
-            </div>
-
-
-
-
-            <p class="font-semibold text-sm pt-8">Что из списка ниже вы добавляете в еду (топпинги, специи)? </p>
-
-
-            <div class="pt-4 flex flex-col space-y-2 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Семечки тыкв.
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Семечки подс.
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Семена льна
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Кунжут
-                </label>
-            </div>
-
-
-            <div id="more-options10" class="pt-4 flex flex-col space-y-2 gap-4 hidden">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Прованские травы
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Сушеная зелень (приправы)
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Лавровый лист
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Чиа
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Тмин
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Корица
-                </label>
-            </div>
-
-            <button id="showMoreButton12" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore10()">
-                <img src="./images/icons/more_icon.svg" alt="">
-                <p class="text-gray-500">больше</p>
-            </button>
-
-            <script>
-                let currentSection12 = 0;
-        
-                function showMore10() {
-                    if (currentSection12 === 0) {
-                        document.getElementById('more-options10').classList.remove('hidden');
-                        currentSection12++;
-                    } if (currentSection12 >= 2) {
-                        document.getElementById('showMoreButton12').style.display = 'none';
-                    }
-                }
-
-
-
-                
-            </script>
-
-
-
-
-            <p class="font-semibold text-sm">От чего вы не готовы отказаться?
-            </p>
-            <div class=" flex flex-col space-y-2 pt-4 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Зефир
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Мармелад
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Шоколад
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Печенье затяжное
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Печенье овсяное
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Вафли с фрукт. нач.
-                </label>
-
-            </div>
-
-
-
-
-            <p class="font-semibold text-sm pt-8">Какое спортивное питание вы используете?
-            </p>
-            <div class="pt-4 flex flex-col space-y-2 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Протеин
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Протеиновые батончики
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Протеиновое печенье
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Протеиновые панкейки
-                </label>
-            </div>
-        </div>
-        </div>
-    </section>
-
-
-
-
-
-
-    <section class="sec_2 p-4 pr-4 w-[450px] mt-6 h-full shadow-md mx-auto rounded-xl items-center justify-center">
-        <div class=" flex justify-between pl-4 pr-4">
-            <h1 class="font-bold">ПРЕДПОЧТЕНИЯ В ГОТОВКЕ</h1>
-            <button id="toggleButtonFood">
-                <img src="./images/icons/arrow-up.svg" alt="">
-            </button>
-        </div>
-
-        <div id="contentFood" class="content">
-            <img src="./images/img/back_2.svg" alt="">
-
-            <p class="font-semibold text-sm ">Сколько дней подряд вы хотите есть одно и то же?
-                (от этого зависит, как часто нужно будет готовить)
-            </p>
-
-            <div class="food_box flex pt-4 flex-col gap-4">
-
-
-
-                <label class=" text-sm font-normal text-[#648179]">
-                    на завтрак <br>
-                    <select id="goal" required aria-placeholder="Выберите значение …"
-                        class="py-2 px-[2px] w-full rounded-lg border border-[#648179] text-base font-normal text-[#648179]">
-                        <option value="maintain">Выберите значение …</option>
-                        <option value="lose">1 день</option>
-                        <option value="lose">2 день</option>
-                        <option value="gain">3 день</option>
-                        <option value="maintain">4 день</option>
-                        <option value="lose">5 день</option>
-                        <option value="gain">6 день</option>
-                        <option value="gain">7 день</option>
-                    </select>
-                </label>
-
-
-
-
-                <label class="text-sm font-normal text-[#648179]">
-                    на обед <br>
-                    <select id="goal" required aria-placeholder="Выберите значение …"
-                        class="py-2 px-[2px] w-full rounded-lg border border-[#648179] text-base font-normal text-[#648179]">
-                        <option value="maintain">Выберите значение …</option>
-                        <option value="lose">1 день</option>
-                        <option value="lose">2 день</option>
-                        <option value="gain">3 день</option>
-                        <option value="maintain">4 день</option>
-                        <option value="lose">5 день</option>
-                        <option value="gain">6 день</option>
-                        <option value="gain">7 день</option>
-                    </select>
-                </label>
-
-
-                <label class="text-sm font-normal text-[#648179]">
-                    на ужин<br>
-                    <select id="goal" required aria-placeholder="Выберите значение …"
-                        class="py-2 px-[2px] w-full rounded-lg border border-[#648179] text-base font-normal text-[#648179]">
-                        <option value="maintain">Выберите значение …</option>
-                        <option value="lose">1 день</option>
-                        <option value="lose">2 день</option>
-                        <option value="gain">3 день</option>
-                        <option value="maintain">4 день</option>
-                        <option value="lose">5 день</option>
-                        <option value="gain">6 день</option>
-                        <option value="gain">7 день</option>
-                    </select>
-                </label>
-
-            </div>
-      
-
-
-
-        <p class="font-semibold text-sm pt-4">Укажите какие перекусы вы хотите иметь в плане</p>
-
-        <div class="flex flex-col space-y-2 pt-4 gap-4">
-            <label class="flex items-center">
-                <input type="checkbox" class="w-6 h-6 mr-2 checkbox">Утренний
-            </label>
-            <label class="flex items-center">
-                <input type="checkbox" class="w-6 h-6 mr-2 checkbox">Дневной
-            </label>
-            <label class="flex items-center">
-                <input type="checkbox" class="w-6 h-6 mr-2 checkbox">Вечерний
-            </label>
-            <label class="flex items-center">
-                <input type="checkbox" class="w-6 h-6 mr-2 checkbox" id="no-snacks">Без перекусов
-            </label>
-        </div>
-        </div>
-
-    </div> 
-    </section>
-
-
-
-
-    <section class="p-4 mt-4 pr-4 w-[450px] h-full shadow-md mx-auto rounded-xl items-center justify-center">
-        <div class="flex justify-between  pl-4 pr-4">
-            <h1 class="font-bold">ПРЕДПОЧТЕНИЯ В БЛЮДАХ</h1>
-            <button id="toggleButtonFood2">
-                <img src="./images/icons/arrow-up.svg" alt="">
-            </button>
-        </div>
-        <div id="contentFood2" class="content">
-
-            <img class="mt-4" src="./images/img/back_3.svg" alt="back_3">
-        
-            <div class="items-center text-center justify-center">
-                <p class="items-center text-center pt-6 font-medium">Хотите сделать ваш план разнообразнее?</p>
-
-                <button class="mt-[7px] rounded-3xl border-[1px] py-[16px] px-[100px] border-green-500">
-                    <p class="font-bold text-green-500 flex whitespace-nowrap"> Добавить ещё блюда </p>
-                </button>
-            </div>
-        </div>
-    </section>
-
-
-    <script src="./toggles.js"></script>
-    <script src="./script.js"></script>
+	<section class="p-4 pr-4 w-[450px] h-full shadow-md mx-auto rounded-xl items-center justify-center">
+		<div class="flex justify-between pt-8 pl-4 pr-4">
+			<h1 class="font-bold">ПРЕДПОЧТЕНИЯ В ЕДЕ</h1>
+			<button id="toggleButton">
+				<img src="./images/icons/arrow-up.svg" alt="">
+			</button>
+		</div>
+
+
+		<div id="content">
+
+			<img src="./images/img/back_1.svg" alt="">
+
+			<p class="font-semibold text-sm">Какие крупы/гарниры вы едите? (планы без круп не составляются)</p>
+
+			<p id="message" class="text-red-500 text-xs text-right pt-2">Выберите еще хотя бы 2 элемента</p>
+			<div class="flex flex-col space-y-2 pt-8 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Гречка
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Рис белый
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()">Овсянка
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Пшенка
+				</label>
+			</div>
+
+
+			<div id="moreItems" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Перловка
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Макароны из твердых сортов
+					пшеницы
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Чечевица
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Картофель
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Булгур
+				</label>
+			</div>
+
+
+
+			<div id="moreItems1_2" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Кускус
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Рис бурый
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Рис дикий
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Горох сушеный
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Нут
+				</label>
+			</div>
+
+
+
+			<div id="moreItems1_3" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Горох маш
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Киноа
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Кукурузная крупа
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Ячневая крупа
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Манная крупа
+				</label>
+			</div>
+
+			<div id="moreItems1_4" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Батат
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Полба
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Льняная каша
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Макароны без глютена
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Ржаная крупа
+				</label>
+			</div>
+
+			<div id="moreItems1_5" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Пшеничная крупа
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Ячменная крупа
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Гречневая лапша
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Рисовая лапша
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Пшеничная лапша
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Фунчоза
+				</label>
+			</div>
+
+			<button id="showMoreButton" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore()">
+				<img src="./images/icons/more_icon.svg" alt="">
+				<p class="text-gray-500">больше</p>
+			</button>
+
+			<script>
+				let currentSection = 0;
+
+				function showMore() {
+					if (currentSection === 0) {
+						document.getElementById('moreItems').classList.remove('hidden');
+						currentSection++;
+					} else if (currentSection === 1) {
+						document.getElementById('moreItems1_2').classList.remove('hidden');
+						currentSection++;
+					} else if (currentSection === 2) {
+						document.getElementById('moreItems1_3').classList.remove('hidden');
+						currentSection++;
+					} else if (currentSection === 3) {
+						document.getElementById('moreItems1_4').classList.remove('hidden');
+						currentSection++;
+					}
+
+					if (currentSection >= 4) {
+						document.getElementById('showMoreButton').style.display = 'none';
+					}
+				}
+			</script>
+
+
+
+			<p class="font-semibold text-sm pt-8">Какие мучные изделия вы едите?</p>
+			<div class="flex flex-col space-y-2 pt-8 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2">Цельнозерновой хлеб
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2">Хлебцы (ржаные; мультизлаковые и т.п.)
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2">Хлеб ржаной/черный
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2">Лаваш бездрожжевой
+				</label>
+			</div>
+
+
+
+			<div id="more-options" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2">Тортилья
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2">Хлеб пшеничный
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2">Хлеб без глютена
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2">Мука пшеничная цельнозерновая
+				</label>
+			</div>
+
+
+			<div id="more-options2-2" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2">Мука овсяная
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2">Мука кокосовая
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2">Мука миндальная
+				</label>
+			</div>
+
+
+			<button id="showMoreButton2" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore1()">
+				<img src="./images/icons/more_icon.svg" alt="">
+				<p class="text-gray-500">больше</p>
+			</button>
+
+			<script>
+				let currentSection2 = 0;
+
+				function showMore1() {
+					if (currentSection2 === 0) {
+						document.getElementById('more-options').classList.remove('hidden');
+						currentSection2++;
+					} else if (currentSection2 === 1) {
+						document.getElementById('more-options2-2').classList.remove('hidden');
+						currentSection2++;
+					}
+					if (currentSection2 >= 2) {
+						document.getElementById('showMoreButton2').style.display = 'none';
+					}
+				}
+			</script>
+
+
+
+
+			<p class="font-semibold text-sm pt-8">Что из списка ниже есть в вашем рационе (мясо, <br> птица)?</p>
+
+
+			<div class=" flex flex-col space-y-2 pt-8 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Куриная грудка
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Куриное бедро
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Куриная голень
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Фарш из филе курицы
+				</label>
+			</div>
+
+
+			<div id="more-options2" class=" flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Грудка индейки
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Бедро индейки
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Голень индейки
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Фарш из индейки
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Говядина
+				</label>
+
+			</div>
+
+
+
+			<div id="more-options3-2" class=" flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Телятина
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Свинина
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Баранина
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Кролик
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Говяжья печень
+				</label>
+			</div>
+
+			<div id="more-options3-3" class=" flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Куриная печень
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Куриные желудочки
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Куриные сердечки
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Утка
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Лосятина
+				</label>
+			</div>
+
+
+			<div id="more-options3-4" class=" flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Оленина
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Кабан
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Косуля
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Конина
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Нутрия
+				</label>
+			</div>
+
+
+			<button id="showMoreButton3" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore2()">
+				<img src="./images/icons/more_icon.svg" alt="">
+				<p class="text-gray-500">больше</p>
+			</button>
+
+			<script>
+				let currentSection3 = 0;
+
+				function showMore2() {
+					if (currentSection3 === 0) {
+						document.getElementById('more-options2').classList.remove('hidden');
+						currentSection3++;
+					} else if (currentSection3 === 1) {
+						document.getElementById('more-options3-2').classList.remove('hidden');
+						currentSection3++;
+					} else if (currentSection3 === 2) {
+						document.getElementById('more-options3-3').classList.remove('hidden');
+						currentSection3++;
+					} else if (currentSection3 === 3) {
+						document.getElementById('more-options3-4').classList.remove('hidden');
+						currentSection3++;
+					}
+					if (currentSection3 >= 4) {
+						document.getElementById('showMoreButton3').style.display = 'none';
+					}
+				}
+			</script>
+
+
+			<p class="font-semibold text-sm pt-8">Какие бобовые вы едите?</p>
+
+
+			<div class=" flex flex-col space-y-2 pt-8 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Кукуруза
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Горошек
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Фасоль
+				</label>
+			</div>
+
+
+
+			<p class="font-semibold text-sm pt-8">Что из списка ниже есть в вашем рационе (рыба, морепродукты)?</p>
+
+
+			<div class=" flex flex-col space-y-2 pt-8 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Тилапия
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Судак
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Дорадо
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Карп
+				</label>
+			</div>
+
+
+			<div id="more-options3" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Окунь
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Треска
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Минтай
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Семга
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Лосось
+				</label>
+
+			</div>
+
+
+
+
+			<div id="more-options4-2" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Горбуша
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Форель
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Тунец конс.
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Креветки
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Кальмары
+				</label>
+			</div>
+
+
+			<div id="more-options4-3" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Мидии
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Коктейль из морепродуктов
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Икра минтаевая
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Икра щучья
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Икра красная
+				</label>
+			</div>
+
+
+			<div id="more-options4-4" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Красная рыба с/с
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Амур
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Белуга
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Голец
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Гребешки
+				</label>
+			</div>
+
+
+			<div id="more-options4-5" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Дори
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Желтохвост/лакедра
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Зубатка синяя
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Камбала
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Карась
+				</label>
+			</div>
+
+
+
+			<div id="more-options4-6" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Кета
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Кефаль
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Кижуч
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Корюшка
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Крабы
+				</label>
+			</div>
+
+
+			<div id="more-options4-7" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Ленок
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Лещ
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Лимонелла
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Мойва
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Морской язык
+				</label>
+			</div>
+
+
+			<div id="more-options4-8" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Муксун
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Навага
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Нерка
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Осетр
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Осьминоги
+				</label>
+			</div>
+
+
+
+			<div id="more-options4-9" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Палтус
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Пангасиус
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Пеленгас
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Пелядь
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Пикша
+				</label>
+			</div>
+
+
+
+			<div id="more-options4-10" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Путассу
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Ряпушка
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Сазан
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Сардина
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Севрюга
+				</label>
+			</div>
+
+
+			<div id="more-options4-11" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Сибас
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Скумбрия
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Сом
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Терпуг
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Толстолобик
+				</label>
+			</div>
+
+
+			<div id="more-options4-12" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Тунец
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Хариус
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Хек
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Чир/щокур
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Щука
+				</label>
+			</div>
+
+			<button id="showMoreButton4" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore3()">
+				<img src="./images/icons/more_icon.svg" alt="">
+				<p class="text-gray-500">больше</p>
+			</button>
+
+			<script>
+				let currentSection4 = 0;
+
+				function showMore3() {
+					if (currentSection4 === 0) {
+						document.getElementById('more-options3').classList.remove('hidden');
+						currentSection4++;
+					} else if (currentSection4 === 1) {
+						document.getElementById('more-options4-2').classList.remove('hidden');
+						currentSection4++;
+					} else if (currentSection4 === 2) {
+						document.getElementById('more-options4-3').classList.remove('hidden');
+						currentSection4++;
+					} else if (currentSection4 === 3) {
+						document.getElementById('more-options4-4').classList.remove('hidden');
+						currentSection4++;
+					} else if (currentSection4 === 4) {
+						document.getElementById('more-options4-5').classList.remove('hidden');
+						currentSection4++;
+					} else if (currentSection4 === 5) {
+						document.getElementById('more-options4-6').classList.remove('hidden');
+						currentSection4++;
+					} else if (currentSection4 === 6) {
+						document.getElementById('more-options4-7').classList.remove('hidden');
+						currentSection4++;
+					} else if (currentSection4 === 7) {
+						document.getElementById('more-options4-8').classList.remove('hidden');
+						currentSection4++;
+					} else if (currentSection4 === 8) {
+						document.getElementById('more-options4-9').classList.remove('hidden');
+						currentSection4++;
+					} else if (currentSection4 === 9) {
+						document.getElementById('more-options4-10').classList.remove('hidden');
+						currentSection4++;
+					} else if (currentSection4 === 10) {
+						document.getElementById('more-options4-11').classList.remove('hidden');
+						currentSection4++;
+					} else if (currentSection4 === 11) {
+						document.getElementById('more-options4-12').classList.remove('hidden');
+						currentSection4++;
+					}
+					if (currentSection4 >= 12) {
+						document.getElementById("showMoreButton4").style.display = 'none';
+					}
+				}
+			</script>
+
+
+
+
+			<p class="font-semibold text-sm pt-8">Какую молочку и кисломолочку вы едите?
+			</p>
+
+
+			<div class=" flex flex-col space-y-2 pt-8 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Молоко
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Молоко обезж.
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Молоко без лакт.
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Молоко растительное
+				</label>
+			</div>
+
+
+			<div id="more-options4" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Творог
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Сметана
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Йогурт
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Кефир
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Ряженка
+				</label>
+			</div>
+
+
+
+			<div id="more-options5-2" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Масло сливочное
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Сыр нежирный (до 20%)
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Сыр обычный (40%)
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Брынза
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Сыр козий
+				</label>
+			</div>
+
+
+			<div id="more-options5-3" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Сыр Сулугуни
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Фета
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Моцарелла
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Рикотта
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Сыр творожный
+				</label>
+			</div>
+
+
+
+			<div id="more-options5-4" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Сыр филадельфия
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Ацидофилин
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Мацони
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Айран
+				</label>
+			</div>
+
+			<button id="showMoreButton5" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore4()">
+				<img src="./images/icons/more_icon.svg" alt="">
+				<p class="text-gray-500">больше</p>
+			</button>
+
+
+			<script>
+				let currentSection5 = 0;
+
+				function showMore4() {
+					if (currentSection5 === 0) {
+						document.getElementById('more-options4').classList.remove('hidden');
+						currentSection5++;
+					} else if (currentSection5 === 1) {
+						document.getElementById('more-options5-2').classList.remove('hidden');
+						currentSection5++;
+					} else if (currentSection5 === 2) {
+						document.getElementById('more-options5-3').classList.remove('hidden');
+						currentSection5++;
+					} else if (currentSection5 === 3) {
+						document.getElementById('more-options5-4').classList.remove('hidden');
+						currentSection5++;
+					}
+					if (currentSection5 >= 4) {
+						document.getElementById('showMoreButton5').style.display = 'none';
+					}
+				}
+			</script>
+
+
+
+
+			<p class="font-semibold text-sm pt-8">Едите ли вы яйца?
+			</p>
+
+
+			<div class="pt-4 flex flex-col space-y-2 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Белок
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Желток
+				</label>
+			</div>
+
+
+
+
+			<p class="font-semibold text-sm pt-8">Едите ли вы орехи? Если да, то какие?
+			</p>
+
+
+			<div class="pt-4 flex flex-col space-y-2 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Миндаль
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Грецкий орех
+
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Фундук
+
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Пекан
+				</label>
+			</div>
+
+
+			<div id="more-options5" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Кешью
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Фисташки
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Арахис
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Кедровые орехи
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Макадамия
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Кокос
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Бразильский орех
+				</label>
+			</div>
+
+
+
+			<button id="showMoreButton6" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore5()">
+				<img src="./images/icons/more_icon.svg" alt="">
+				<p class="text-gray-500">больше</p>
+			</button>
+
+			<script>
+				let currentSection6 = 0;
+
+				function showMore5() {
+					if (currentSection6 === 0) {
+						document.getElementById('more-options5').classList.remove('hidden');
+						currentSection6++;
+					}
+					if (currentSection6 >= 1) {
+						document.getElementById('showMoreButton6').style.display = 'none';
+					}
+				}
+			</script>
+
+
+
+
+
+
+			<p class="font-semibold text-sm pt-8">Какие сухофрукты вам нравятся?
+			</p>
+
+
+			<div class="pt-4 flex flex-col space-y-2 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Курага
+
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Финики
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Изюм
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Чернослив
+				</label>
+			</div>
+
+
+
+			<div id="more-options6" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Инжир
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Дыня (сухофрукт)
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Яблоки сушеные
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Груши сушеные
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Вишня сушеная
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Манго сушеный
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Банан сушеный
+				</label>
+			</div>
+
+			<button id="showMoreButton7" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore6()">
+				<img src="./images/icons/more_icon.svg" alt="">
+				<p class="text-gray-500">больше</p>
+			</button>
+
+
+
+			<script>
+				let currentSection7 = 0;
+
+				function showMore6() {
+					if (currentSection7 === 0) {
+						document.getElementById('more-options6').classList.remove('hidden');
+						currentSection7++;
+					} if (currentSection7 >= 1) {
+						document.getElementById('showMoreButton7').style.display = 'none';
+					}
+				}
+			</script>
+
+
+
+
+
+
+			<p class="font-semibold text-sm pt-8">Что из списка сладкого ниже вы любите?
+			</p>
+
+
+			<div class="pt-4 flex flex-col space-y-2 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Мед
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Варенье
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Конфитюр/джем
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Джем zero
+				</label>
+			</div>
+
+
+
+			<div id="more-options7" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Сироп агавы
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Арахисовая паста
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Кокосовая паста
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Сгущенка
+				</label>
+			</div>
+
+			<button id="showMoreButton8" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore7()">
+				<img src="./images/icons/more_icon.svg" alt="">
+				<p class="text-gray-500">больше</p>
+			</button>
+
+			<script>
+				let currentSection8 = 0;
+
+				function showMore7() {
+					if (currentSection8 === 0) {
+						document.getElementById('more-options7').classList.remove('hidden');
+						currentSection8++;
+					} if (currentSection8 >= 1) {
+						document.getElementById('showMoreButton8').style.display = 'none';
+					}
+				}
+			</script>
+
+
+
+			<p class="font-semibold text-sm pt-8">Какие овощи вы едите? (учитывайте сезонность)
+			</p>
+
+			<p class="text-red-500 text-xs text-right " id="messages">Выберите еще хотя бы 2 элемента</p>
+
+			<div class="pt-4 flex flex-col space-y-2  gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Помидоры
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Огурцы
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Перец сладкий
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Лук репчатый
+				</label>
+			</div>
+
+
+
+			<div id="more-options8" class="pt-4 flex flex-col space-y-2  gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Морковь
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Капуста белокочанная
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Листья салата
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Пекинская капуста
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Руккола
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Сельдерей
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Зелень (укроп, петрушка и
+					др.)
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Розмарин
+				</label>
+			</div>
+
+
+			<div id="more-options8-2" class="pt-4 flex flex-col space-y-2  gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Морковь
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Капуста белокочанная
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Листья салата
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Пекинская капуста
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Руккола
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Сельдерей
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Зелень (укроп, петрушка и
+					др.)
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Розмарин
+				</label>
+			</div>
+
+			<button id="showMoreButton9" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore8()">
+				<img src="./images/icons/more_icon.svg" alt="">
+				<p class="text-gray-500">больше</p>
+			</button>
+
+			<script>
+				let currentSection9 = 0;
+
+				function showMore8() {
+					if (currentSection9 === 0) {
+						document.getElementById('more-options8').classList.remove('hidden');
+						currentSection9++;
+					} else if (currentSection9 >= 1) {
+						document.getElementById('more-options8-2').style.display = 'none';
+					} if (currentSection9 >= 2) {
+						document.getElementById('showMoreButton9').style.display = 'none';
+					}
+				}
+			</script>
+
+
+			<p class="font-semibold text-sm pt-8">Какие фрукты вы едите? (учитывайте сезонность)
+			</p>
+
+
+			<div class="pt-4 flex flex-col space-y-2 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Яблоко
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Груша
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Банан
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Мандарин
+				</label>
+			</div>
+
+
+			<div id="more-options11" class="pt-4 flex flex-col space-y-2 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Апельсин
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Киви
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Лимон
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Ягоды зам./свежие
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Вишня
+				</label>
+			</div>
+
+
+
+
+			<div id="more-options11-2" class="pt-4 flex flex-col space-y-2 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Виноград
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Слива
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Грейпфрут
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Гранат
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Вишня
+				</label>
+			</div>
+
+
+			<button id="showMoreButton11" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore11()">
+				<img src="./images/icons/more_icon.svg" alt="">
+				<p class="text-gray-500">больше</p>
+			</button>
+
+
+			<script>
+				let currentSection11 = 0;
+
+				function showMore11() {
+					if (currentSection11 === 0) {
+						document.getElementById('more-options11').classList.remove('hidden');
+						currentSection11++;
+					} else if (currentSection11 >= 1) {
+						document.getElementById('more-options11-2').style.display = 'none';
+					} if (currentSection11 >= 2) {
+						document.getElementById('showMoreButton11').style.display = 'none';
+					}
+				}
+
+
+
+
+			</script>
+
+
+
+			<p class="font-semibold text-sm pt-8">Какие соусы вам нравятся?
+			</p>
+
+
+			<div class="pt-4 flex flex-col space-y-2 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Томатная паста
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Соевый соус
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Хрен сливочный
+				</label>
+			</div>
+
+
+
+			<p class="font-semibold text-sm pt-8">Какие масла вы используете?
+			</p>
+			<p class="text-red-500 text-xs text-right " id="messages3">Выберите еще хотя бы 2 элемента</p>
+
+			<div class="pt-4 flex flex-col space-y-2 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages3()">Масло подсолнечное
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages3()">Масло олив.
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages3()">Масло льняное
+				</label>
+			</div>
+
+
+
+
+
+
+
+			<p class="font-semibold text-sm pt-8">Едите ли вы что-то из соевых продуктов?
+
+			</p>
+
+
+			<div class="pt-4 flex flex-col space-y-2 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Тофу
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Соевое мясо
+				</label>
+			</div>
+
+
+
+
+			<p class="font-semibold text-sm pt-8">Что из списка ниже вы добавляете в еду (топпинги, специи)? </p>
+
+
+			<div class="pt-4 flex flex-col space-y-2 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Семечки тыкв.
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Семечки подс.
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Семена льна
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Кунжут
+				</label>
+			</div>
+
+
+			<div id="more-options10" class="pt-4 flex flex-col space-y-2 gap-4 hidden">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Прованские травы
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Сушеная зелень (приправы)
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Лавровый лист
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Чиа
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Тмин
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Корица
+				</label>
+			</div>
+
+			<button id="showMoreButton12" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore10()">
+				<img src="./images/icons/more_icon.svg" alt="">
+				<p class="text-gray-500">больше</p>
+			</button>
+
+			<script>
+				let currentSection12 = 0;
+
+				function showMore10() {
+					if (currentSection12 === 0) {
+						document.getElementById('more-options10').classList.remove('hidden');
+						currentSection12++;
+					} if (currentSection12 >= 1) {
+						document.getElementById('showMoreButton12').style.display = 'none';
+					}
+				}
+
+
+
+
+			</script>
+
+
+
+
+			<p class="font-semibold text-sm">От чего вы не готовы отказаться?
+			</p>
+			<div class=" flex flex-col space-y-2 pt-4 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Зефир
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Мармелад
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Шоколад
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Печенье затяжное
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Печенье овсяное
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Вафли с фрукт. нач.
+				</label>
+
+			</div>
+
+
+
+
+			<p class="font-semibold text-sm pt-8">Какое спортивное питание вы используете?
+			</p>
+			<div class="pt-4 flex flex-col space-y-2 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Протеин
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Протеиновые батончики
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Протеиновое печенье
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6  mr-2">Протеиновые панкейки
+				</label>
+			</div>
+		</div>
+		</div>
+	</section>
+
+
+
+
+
+
+	<section class="sec_2 p-4 pr-4 w-[450px] mt-6 h-full shadow-md mx-auto rounded-xl items-center justify-center">
+		<div class=" flex justify-between pl-4 pr-4">
+			<h1 class="font-bold">ПРЕДПОЧТЕНИЯ В ГОТОВКЕ</h1>
+			<button id="toggleButtonFood">
+				<img src="./images/icons/arrow-up.svg" alt="">
+			</button>
+		</div>
+
+		<div id="contentFood" class="content">
+			<img src="./images/img/back_2.svg" alt="">
+
+			<p class="font-semibold text-sm ">Сколько дней подряд вы хотите есть одно и то же?
+				(от этого зависит, как часто нужно будет готовить)
+			</p>
+
+			<div class="food_box flex pt-4 flex-col gap-4">
+
+
+
+				<label class=" text-sm font-normal text-[#648179]">
+					на завтрак <br>
+					<select id="goal" required aria-placeholder="Выберите значение …"
+						class="py-2 px-[2px] w-full rounded-lg border border-[#648179] text-base font-normal text-[#648179]">
+						<option value="maintain">Выберите значение …</option>
+						<option value="lose">1 день</option>
+						<option value="lose">2 день</option>
+						<option value="gain">3 день</option>
+						<option value="maintain">4 день</option>
+						<option value="lose">5 день</option>
+						<option value="gain">6 день</option>
+						<option value="gain">7 день</option>
+					</select>
+				</label>
+
+
+
+
+				<label class="text-sm font-normal text-[#648179]">
+					на обед <br>
+					<select id="goal" required aria-placeholder="Выберите значение …"
+						class="py-2 px-[2px] w-full rounded-lg border border-[#648179] text-base font-normal text-[#648179]">
+						<option value="maintain">Выберите значение …</option>
+						<option value="lose">1 день</option>
+						<option value="lose">2 день</option>
+						<option value="gain">3 день</option>
+						<option value="maintain">4 день</option>
+						<option value="lose">5 день</option>
+						<option value="gain">6 день</option>
+						<option value="gain">7 день</option>
+					</select>
+				</label>
+
+
+				<label class="text-sm font-normal text-[#648179]">
+					на ужин<br>
+					<select id="goal" required aria-placeholder="Выберите значение …"
+						class="py-2 px-[2px] w-full rounded-lg border border-[#648179] text-base font-normal text-[#648179]">
+						<option value="maintain">Выберите значение …</option>
+						<option value="lose">1 день</option>
+						<option value="lose">2 день</option>
+						<option value="gain">3 день</option>
+						<option value="maintain">4 день</option>
+						<option value="lose">5 день</option>
+						<option value="gain">6 день</option>
+						<option value="gain">7 день</option>
+					</select>
+				</label>
+
+			</div>
+
+
+
+
+			<p class="font-semibold text-sm pt-4">Укажите какие перекусы вы хотите иметь в плане</p>
+
+			<div class="flex flex-col space-y-2 pt-4 gap-4">
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2 checkbox">Утренний
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2 checkbox">Дневной
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2 checkbox">Вечерний
+				</label>
+				<label class="flex items-center">
+					<input type="checkbox" class="w-6 h-6 mr-2 checkbox" id="no-snacks">Без перекусов
+				</label>
+			</div>
+		</div>
+
+		</div>
+	</section>
+
+
+
+
+	<section class="p-4 mt-4 pr-4 w-[450px] h-full shadow-md mx-auto rounded-xl items-center justify-center">
+		<div class="flex justify-between  pl-4 pr-4">
+			<h1 class="font-bold">ПРЕДПОЧТЕНИЯ В БЛЮДАХ</h1>
+			<button id="toggleButtonFood2">
+				<img src="./images/icons/arrow-up.svg" alt="">
+			</button>
+		</div>
+		<div id="contentFood2" class="content">
+
+			<img class="mt-4" src="./images/img/back_3.svg" alt="back_3">
+
+			<div class="items-center text-center justify-center">
+				<p class="items-center text-center pt-6 font-medium">Хотите сделать ваш план разнообразнее?</p>
+
+				<button class="mt-[7px] rounded-3xl border-[1px] py-[16px] px-[100px] border-green-500">
+					<p class="font-bold text-green-500 flex whitespace-nowrap"> Добавить ещё блюда </p>
+				</button>
+			</div>
+		</div>
+	</section>
+
+
+	<script src="./toggles.js"></script>
+	<script src="./script.js"></script>
 </body>
 
 </html>
