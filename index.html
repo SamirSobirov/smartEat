@@ -166,6 +166,10 @@
                 document.getElementById('moreItems1_4').classList.remove('hidden');
                 currentSection++;
             } 
+
+            if (currentSection >= 4) {
+                document.getElementById('showMoreButton').style.display = 'none';
+            }
         }
     </script>
 
