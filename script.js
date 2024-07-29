@@ -183,3 +183,42 @@ function showMore10() {
 
 
 
+
+
+    
+if (goal === 'maintain') {
+    target_p.innerHTML = `<b>Выберите значение …</b>`
+
+}
+else if (goal === 'lose') {
+    tdee -= 500;
+    target_p.innerHTML = `<b></b>`
+
+} else if (goal === 'gain') {
+    tdee += 500;
+    target_p.innerHTML = `<b></b>`
+
+}
+
+
+document.getElementById('no-snacks').addEventListener('change', function() {
+    const checkboxes = document.querySelectorAll('.checkbox');
+    if (this.checked) {
+        checkboxes.forEach(checkbox => {
+            if (checkbox !== this) {
+                checkbox.checked = false;
+            }
+        });
+    }
+});
+
+const checkboxes = document.querySelectorAll('.checkbox');
+checkboxes.forEach(checkbox => {
+    if (checkbox.id !== 'no-snacks') {
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('no-snacks').checked = false;
+            }
+        });
+    }
+});

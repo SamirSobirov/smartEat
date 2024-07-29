@@ -455,7 +455,7 @@
             </div>
 
 
-            
+
             <div id="more-options7" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
                 <label class="flex items-center">
                     <input type="checkbox" class="w-6 h-6  mr-2">Сироп агавы
@@ -521,7 +521,8 @@
                     <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Сельдерей
                 </label>
                 <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Зелень (укроп, петрушка и др.)
+                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Зелень (укроп, петрушка и
+                    др.)
                 </label>
                 <label class="flex items-center">
                     <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Розмарин
@@ -736,55 +737,96 @@
 
 
 
-    <section class="p-4 pr-4 w-[450px] mt-6 h-full shadow-md mx-auto rounded-xl items-center justify-center">
-        <div class=" flex justify-between pt-8 pl-4 pr-4">
+    <section class="sec_2 p-4 pr-4 w-[450px] mt-6 h-full shadow-md mx-auto rounded-xl items-center justify-center">
+        <div class=" flex justify-between pl-4 pr-4">
             <h1 class="font-bold">ПРЕДПОЧТЕНИЯ В ГОТОВКЕ</h1>
             <button id="toggleButtonFood">
                 <img src="./images/icons/arrow-up.svg" alt="">
             </button>
         </div>
 
-        <div id="contentFood" class="content pt-4">
+        <div id="contentFood" class="content ">
             <img src="./images/img/back_2.svg" alt="">
 
-            <p class="font-semibold text-sm">Сколько дней подряд вы хотите есть одно и то же?
+            <p class="font-semibold text-sm ">Сколько дней подряд вы хотите есть одно и то же?
                 (от этого зависит, как часто нужно будет готовить)
             </p>
 
-            <div class="food_box">
-                <div class="food_item">
-                    <p>на завтрак</p>
-                    <input type="text" placeholder="Выберите значение …" >
-                </div>
+            <div class="food_box flex pt-4 flex-col gap-4">
 
 
-                <div class="food_item">
-                    <p>на обед</p>
-                    <input type="text" placeholder="Выберите значение …">
-                </div>
-                <div class="food_item">
-                    <p>на ужин</p>
-                    <input type="text" placeholder="Выберите значение …">
-                </div>
+
+                <label class=" text-sm font-normal text-[#648179]">
+                    на завтрак <br>
+                    <select id="goal" required aria-placeholder="Выберите значение …"
+                        class="py-2 px-[2px] w-full rounded-lg border border-[#648179] text-base font-normal text-[#648179]">
+                        <option value="maintain">Выберите значение …</option>
+                        <option value="lose">1 день</option>
+                        <option value="lose">2 день</option>
+                        <option value="gain">3 день</option>
+                        <option value="maintain">4 день</option>
+                        <option value="lose">5 день</option>
+                        <option value="gain">6 день</option>
+                        <option value="gain">7 день</option>
+                    </select>
+                </label>
+
+
+
+
+                <label class="text-sm font-normal text-[#648179]">
+                    на обед <br>
+                    <select id="goal" required aria-placeholder="Выберите значение …"
+                        class="py-2 px-[2px] w-full rounded-lg border border-[#648179] text-base font-normal text-[#648179]">
+                        <option value="maintain">Выберите значение …</option>
+                        <option value="lose">1 день</option>
+                        <option value="lose">2 день</option>
+                        <option value="gain">3 день</option>
+                        <option value="maintain">4 день</option>
+                        <option value="lose">5 день</option>
+                        <option value="gain">6 день</option>
+                        <option value="gain">7 день</option>
+                    </select>
+                </label>
+
+
+                <label class="text-sm font-normal text-[#648179]">
+                    на ужин<br>
+                    <select id="goal" required aria-placeholder="Выберите значение …"
+                        class="py-2 px-[2px] w-full rounded-lg border border-[#648179] text-base font-normal text-[#648179]">
+                        <option value="maintain">Выберите значение …</option>
+                        <option value="lose">1 день</option>
+                        <option value="lose">2 день</option>
+                        <option value="gain">3 день</option>
+                        <option value="maintain">4 день</option>
+                        <option value="lose">5 день</option>
+                        <option value="gain">6 день</option>
+                        <option value="gain">7 день</option>
+                    </select>
+                </label>
 
             </div>
-            <p class="font-semibold text-sm">Укажите какие перекусы вы хотите иметь в плане</p>
+        </div>
 
 
-            <div class=" flex flex-col space-y-2 pt-2 gap-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Утренний
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Дневной
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2"> Вечерний
-                </label>
-                <label class="flex items-center">
-                    <input type="checkbox" class="w-6 h-6  mr-2">Без перекусов
-                </label>
-            </div>
+
+        <p class="font-semibold text-sm pt-4">Укажите какие перекусы вы хотите иметь в плане</p>
+
+        <div class="flex flex-col space-y-2 pt-4 gap-4">
+            <label class="flex items-center">
+                <input type="checkbox" class="w-6 h-6 mr-2 checkbox">Утренний
+            </label>
+            <label class="flex items-center">
+                <input type="checkbox" class="w-6 h-6 mr-2 checkbox">Дневной
+            </label>
+            <label class="flex items-center">
+                <input type="checkbox" class="w-6 h-6 mr-2 checkbox">Вечерний
+            </label>
+            <label class="flex items-center">
+                <input type="checkbox" class="w-6 h-6 mr-2 checkbox" id="no-snacks">Без перекусов
+            </label>
+        </div>
+
 
         </div>
     </section>
