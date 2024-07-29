@@ -1088,11 +1088,53 @@
             </div>
 
 
-            <button class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore8()">
+            <div id="more-options8-2" class="pt-4 flex flex-col space-y-2  gap-4 hidden">
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Морковь
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Капуста белокочанная
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Листья салата
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Пекинская капуста
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Руккола
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Сельдерей
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Зелень (укроп, петрушка и
+                    др.)
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2" onclick="updateMessages()">Розмарин
+                </label>
+            </div>
+
+            <button id="showMoreButton9" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore8()">
                 <img src="./images/icons/more_icon.svg" alt="">
                 <p class="text-gray-500">больше</p>
             </button>
 
+            <script>
+                let currentSection9 = 0;
+        
+                function showMore8() {
+                    if (currentSection9 === 0) {
+                        document.getElementById('more-options8').classList.remove('hidden');
+                        currentSection9++;
+                    } else if (currentSection9 >= 1) {
+                        document.getElementById('more-options8-2').style.display = 'none';
+                    } if (currentSection9 >= 2) {
+                        document.getElementById('showMoreButton9').style.display = 'none';
+                    }
+                }
+            </script>
 
 
             <p class="font-semibold text-sm pt-8">Какие фрукты вы едите? (учитывайте сезонность)
@@ -1116,7 +1158,7 @@
             </div>
 
 
-            <div id="more-options9" class="pt-4 flex flex-col space-y-2 gap-4 hidden">
+            <div id="more-options11" class="pt-4 flex flex-col space-y-2 gap-4 hidden">
                 <label class="flex items-center">
                     <input type="checkbox" class="w-6 h-6  mr-2">Апельсин
                 </label>
@@ -1135,11 +1177,47 @@
             </div>
 
 
-            <button class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore9()">
+
+
+            <div id="more-options11-2" class="pt-4 flex flex-col space-y-2 gap-4 hidden">
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Виноград
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Слива
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Грейпфрут
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Гранат
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="w-6 h-6  mr-2">Вишня
+                </label>
+            </div>
+
+
+            <button id="showMoreButton11" class="pt-4 flex whitespace-nowrap gap-2" onclick="showMore11()">
                 <img src="./images/icons/more_icon.svg" alt="">
                 <p class="text-gray-500">больше</p>
             </button>
 
+
+            <script>
+                let currentSection11  = 0;
+        
+                function showMore11() {
+                    if (currentSection11 === 0) {
+                        document.getElementById('more-options11').classList.remove('hidden');
+                        currentSection11++;
+                    } else if (currentSection11 >= 1) {
+                        document.getElementById('more-options11-2').style.display = 'none';
+                    } if (currentSection11 >= 2) {
+                        document.getElementById('showMoreButton11').style.display = 'none';
+                    }
+                }
+            </script>
 
 
 

@@ -149,33 +149,33 @@ function updateMessages3() {
 // }
 
 
-function showMore8() {
-    let moreOptions = document.getElementById('more-options8');
-    if (moreOptions.classList.contains('hidden')) {
-        moreOptions.classList.remove('hidden');
-    } else {
-        moreOptions.classList.add('hidden');
-    }
-}
+// function showMore8() {
+//     let moreOptions = document.getElementById('more-options8');
+//     if (moreOptions.classList.contains('hidden')) {
+//         moreOptions.classList.remove('hidden');
+//     } else {
+//         moreOptions.classList.add('hidden');
+//     }
+// }
 
-function showMore9() {
-    let moreOptions = document.getElementById('more-options9');
-    if (moreOptions.classList.contains('hidden')) {
-        moreOptions.classList.remove('hidden');
-    } else {
-        moreOptions.classList.add('hidden');
-    }
-}
+// function showMore9() {
+//     let moreOptions = document.getElementById('more-options9');
+//     if (moreOptions.classList.contains('hidden')) {
+//         moreOptions.classList.remove('hidden');
+//     } else {
+//         moreOptions.classList.add('hidden');
+//     }
+// }
 
 
-function showMore10() {
-    let moreOptions = document.getElementById('more-options10');
-    if (moreOptions.classList.contains('hidden')) {
-        moreOptions.classList.remove('hidden');
-    } else {
-        moreOptions.classList.add('hidden');
-    }
-}
+// function showMore10() {
+//     let moreOptions = document.getElementById('more-options10');
+//     if (moreOptions.classList.contains('hidden')) {
+//         moreOptions.classList.remove('hidden');
+//     } else {
+//         moreOptions.classList.add('hidden');
+//     }
+// }
 
 
 
