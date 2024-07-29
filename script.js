@@ -69,15 +69,15 @@ function updateMessages3() {
     } else {
         message.textContent = "Достаточное количество элементов выбрано";
 
-    }
+    } 
 }
 
 
 
-function showMore() {
-    const moreItems = document.getElementById('moreItems');
-    moreItems.classList.toggle('hidden');
-}
+// function showMore() {
+//     const moreItems = document.getElementById('more-options1');
+//     moreItems.classList.toggle('hidden');
+// }
 
 function showMore1() {
     let moreOptions = document.getElementById('more-options');
