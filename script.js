@@ -97,14 +97,14 @@ function updateMessages3() {
 // }
 
 
-function showMore3() {
-    let moreOptions = document.getElementById('more-options3');
-    if (moreOptions.classList.contains('hidden')) {
-        moreOptions.classList.remove('hidden');
-    } else {
-        moreOptions.classList.add('hidden');
-    }
-}
+// function showMore3() {
+//     let moreOptions = document.getElementById('more-options3');
+//     if (moreOptions.classList.contains('hidden')) {
+//         moreOptions.classList.remove('hidden');
+//     } else {
+//         moreOptions.classList.add('hidden');
+//     }
+// }
 
 
 
