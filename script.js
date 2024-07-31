@@ -1,10 +1,11 @@
 let selectedArray = [];
 let breadSelectedArray = [];
 let chickenSelectedArray = [];
+let vegetableSelectedArray = [];
 
 function updateMessage() {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(.bread-checkbox):not(.chicken-checkbox)');
-    updateCheckboxes(checkboxes, selectedArray);
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(.bread-checkbox):not(.chicken-checkbox):not(.vegetable-checkbox)');
+    selectedArray = updateCheckboxes(checkboxes, selectedArray);
 
     const message = document.getElementById('message');
     const remaining = 2 - selectedArray.length;
@@ -20,13 +21,19 @@ function updateMessage() {
 
 function updateBreadSection() {
     const breadCheckboxes = document.querySelectorAll('input[type="checkbox"].bread-checkbox');
-    updateCheckboxes(breadCheckboxes, breadSelectedArray);
+    breadSelectedArray = updateCheckboxes(breadCheckboxes, breadSelectedArray);
     updateAdditionalOptions();
 }
 
 function updateChickenSection() {
     const chickenCheckboxes = document.querySelectorAll('input[type="checkbox"].chicken-checkbox');
-    updateCheckboxes(chickenCheckboxes, chickenSelectedArray);
+    chickenSelectedArray = updateCheckboxes(chickenCheckboxes, chickenSelectedArray);
+    updateAdditionalOptions();
+}
+
+function updateVegetableSection() {
+    const vegetableCheckboxes = document.querySelectorAll('input[type="checkbox"].vegetable-checkbox');
+    vegetableSelectedArray = updateCheckboxes(vegetableCheckboxes, vegetableSelectedArray);
     updateAdditionalOptions();
 }
 
@@ -38,6 +45,7 @@ function updateCheckboxes(checkboxes, array) {
             array = array.filter(item => item !== checkbox.value);
         }
     });
+    return array; // Return the updated array
 }
 
 function updateAdditionalOptions() {
@@ -68,7 +76,14 @@ function updateAdditionalOptions() {
         optionsContainer.appendChild(label);
     });
 
-    if (selectedArray.length > 0 || breadSelectedArray.length > 0 || chickenSelectedArray.length > 0) {
+    vegetableSelectedArray.forEach(value => {
+        const label = document.createElement('label');
+        label.classList.add('flex', 'items-center');
+        label.innerHTML = `<input type="checkbox" class="w-6 h-6 mr-2" checked disabled> ${document.querySelector('input[value="' + value + '"]').nextSibling.textContent.trim()}`;
+        optionsContainer.appendChild(label);
+    });
+
+    if (selectedArray.length > 0 || breadSelectedArray.length > 0 || chickenSelectedArray.length > 0 || vegetableSelectedArray.length > 0) {
         additionalOptions.classList.remove('hidden');
     } else {
         additionalOptions.classList.add('hidden');
@@ -76,7 +91,6 @@ function updateAdditionalOptions() {
 }
 
 function showMore() {
-    // Implement the functionality for "show more" button here
     alert("Show more button clicked!");
 }
 
@@ -99,8 +113,6 @@ function updateMessages() {
         message.textContent = "Достаточное количество элементов выбрано";
     }
 }
-
-
 
 
 
