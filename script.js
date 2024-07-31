@@ -1,8 +1,16 @@
+
+let selectedArray = [];
+
 function updateMessage() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     let checkedCount = 0;
 
     checkboxes.forEach(checkbox => {
+        if (checkbox.checked && !selectedArray.includes(checkbox.value)) {
+            selectedArray.push(checkbox.value);
+        } else if (!checkbox.checked && selectedArray.includes(checkbox.value)) {
+            selectedArray = selectedArray.filter(item => item !== checkbox.value);
+        }
         if (checkbox.checked) {
             checkedCount++;
         }
@@ -16,7 +24,27 @@ function updateMessage() {
     } else {
         message.textContent = "Достаточное количество элементов выбрано";
     }
+
+    const additionalOptions = document.getElementById('additional-options');
+    const optionsContainer = additionalOptions.querySelector('.flex.flex-col');
+    optionsContainer.innerHTML = `
+        <p class="font-semibold text-sm pt-4">В дополнение к завтраку</p>
+    `;
+
+    selectedArray.forEach(value => {
+        const label = document.createElement('label');
+        label.classList.add('flex', 'items-center');
+        label.innerHTML = `<input type="checkbox" class="w-6 h-6 mr-2" checked disabled> ${document.querySelector('input[value="' + value + '"]').nextSibling.textContent.trim()}`;
+        optionsContainer.appendChild(label);
+    });
+
+    if (selectedArray.length > 0) {
+        additionalOptions.classList.remove('hidden');
+    } else {
+        additionalOptions.classList.add('hidden');
+    }
 }
+
 
 
 //kolichestvo 2 button

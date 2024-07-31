@@ -38,23 +38,25 @@
 			<p id="message" class="text-red-500 text-xs text-right ">Выберите еще хотя бы 2 элемента</p>
 			<div class="flex flex-col space-y-2 pt-2 gap-4">
 				<label class="flex items-center">
-					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Гречка
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()" value="Option 1" name="breakfastOption"> Гречка
 				</label>
 				<label class="flex items-center">
-					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Рис белый
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()" value="Option 2" name="breakfastOption"> Рис белый
 				</label>
 				<label class="flex items-center">
-					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()">Овсянка
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()" value="Option 3" name="breakfastOption">Овсянка
 				</label>
 				<label class="flex items-center">
-					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Пшенка
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()" value="Option 4" name="breakfastOption"> Пшенка
 				</label>
 			</div>
+
+			
 
 
 			<div id="moreItems" class="flex flex-col space-y-2 pt-8 gap-4 hidden">
 				<label class="flex items-center">
-					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Перловка
+					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()" value="Option 5" name="breakfastOption"> Перловка
 				</label>
 				<label class="flex items-center">
 					<input type="checkbox" class="w-6 h-6 mr-2" onclick="updateMessage()"> Макароны из твердых сортов
@@ -1502,8 +1504,7 @@
 	</section>
 
 
-
-
+	
 	<section class="p-4 mt-4 pr-4 w-[400px] h-full shadow-md mx-auto rounded-xl items-center justify-center">
 		<div class="flex justify-between  pl-4 pr-4">
 			<h1 class="font-bold">ПРЕДПОЧТЕНИЯ В БЛЮДАХ</h1>
@@ -1517,6 +1518,46 @@
 				<p class="text-xs py-4 px-4 text-white "><b><i>Вот список блюд, которые будут в вашем плане. Вы можете отключить те блюда, которые вы не любите/не едите.</i></b></p>
 					<img class="h-[128px] " src="./images/img/sec_3Back.svg" alt="">
 			</div>
+
+		    <div class="hidden h-full" id="additional-options">
+				<div class="flex flex-col space-y-2 pt-2 gap-4">
+					<p class="font-semibold text-sm pt-4">В дополнение к завтраку</p>
+					<!-- <label class="flex items-center">
+						<input type="checkbox" class="w-6 h-6 mr-2 checkbox" id="no-snacks">
+					</label> -->
+				</div>
+			</div>
+		
+
+			<p id="message"></p>
+		
+
+			<!-- <script>
+				
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const additionalOptions = document.getElementById('additional-options');
+                const selectedOptions = document.querySelectorAll('input[type="checkbox"]:checked');
+
+                additionalOptions.innerHTML = '<p class="font-semibold text-sm pt-4">В дополнение к завтраку</p>';
+                
+                selectedOptions.forEach(option => {
+                    const p = document.createElement('p');
+                    p.textContent = `${option.name}: ${option.value}`;
+                    additionalOptions.appendChild(p);
+                });
+
+                if (selectedOptions.length > 0) {
+                    additionalOptions.classList.remove('hidden');
+                } else {
+                    additionalOptions.classList.add('hidden');
+                }
+            });
+        });
+    </script> -->
+
+			
+
 
 			<div class="items-center text-center justify-center">
 				<p class="items-center text-center pt-6 font-medium">Хотите сделать ваш план разнообразнее?</p>
