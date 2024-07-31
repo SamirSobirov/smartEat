@@ -1,23 +1,14 @@
 
+
 let selectedArray = [];
+let breadSelectedArray = [];
 
 function updateMessage() {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    let checkedCount = 0;
-
-    checkboxes.forEach(checkbox => {
-        if (checkbox.checked && !selectedArray.includes(checkbox.value)) {
-            selectedArray.push(checkbox.value);
-        } else if (!checkbox.checked && selectedArray.includes(checkbox.value)) {
-            selectedArray = selectedArray.filter(item => item !== checkbox.value);
-        }
-        if (checkbox.checked) {
-            checkedCount++;
-        }
-    });
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(.bread-checkbox)');
+    updateCheckboxes(checkboxes, selectedArray);
 
     const message = document.getElementById('message');
-    const remaining = 2 - checkedCount;
+    const remaining = 2 - selectedArray.length;
 
     if (remaining > 0) {
         message.textContent = `Выберите еще хотя бы ${remaining} элемента`;
@@ -25,6 +16,28 @@ function updateMessage() {
         message.textContent = "Достаточное количество элементов выбрано";
     }
 
+    updateAdditionalOptions();
+}
+
+function updateBreadSection() {
+    const breadCheckboxes = document.querySelectorAll('input[type="checkbox"].bread-checkbox');
+    updateCheckboxes(breadCheckboxes, breadSelectedArray);
+
+
+    updateAdditionalOptions();
+}
+
+function updateCheckboxes(checkboxes, array) {
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked && !array.includes(checkbox.value)) {
+            array.push(checkbox.value);
+        } else if (!checkbox.checked && array.includes(checkbox.value)) {
+            array = array.filter(item => item !== checkbox.value);
+        }
+    });
+}
+
+function updateAdditionalOptions() {
     const additionalOptions = document.getElementById('additional-options');
     const optionsContainer = additionalOptions.querySelector('.flex.flex-col');
     optionsContainer.innerHTML = `
@@ -38,14 +51,24 @@ function updateMessage() {
         optionsContainer.appendChild(label);
     });
 
-    if (selectedArray.length > 0) {
+    breadSelectedArray.forEach(value => {
+        const label = document.createElement('label');
+        label.classList.add('flex', 'items-center');
+        label.innerHTML = `<input type="checkbox" class="w-6 h-6 mr-2" checked disabled> ${document.querySelector('input[value="' + value + '"]').nextSibling.textContent.trim()}`;
+        optionsContainer.appendChild(label);
+    });
+
+    if (selectedArray.length > 0 || breadSelectedArray.length > 0) {
         additionalOptions.classList.remove('hidden');
     } else {
         additionalOptions.classList.add('hidden');
     }
 }
 
-
+function showMore() {
+    // Implement the functionality for "show more" button here
+    alert("Show more button clicked!");
+}
 
 //kolichestvo 2 button
 function updateMessages() {
