@@ -1,10 +1,9 @@
-
-
 let selectedArray = [];
 let breadSelectedArray = [];
+let chickenSelectedArray = [];
 
 function updateMessage() {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(.bread-checkbox)');
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(.bread-checkbox):not(.chicken-checkbox)');
     updateCheckboxes(checkboxes, selectedArray);
 
     const message = document.getElementById('message');
@@ -22,8 +21,12 @@ function updateMessage() {
 function updateBreadSection() {
     const breadCheckboxes = document.querySelectorAll('input[type="checkbox"].bread-checkbox');
     updateCheckboxes(breadCheckboxes, breadSelectedArray);
+    updateAdditionalOptions();
+}
 
-
+function updateChickenSection() {
+    const chickenCheckboxes = document.querySelectorAll('input[type="checkbox"].chicken-checkbox');
+    updateCheckboxes(chickenCheckboxes, chickenSelectedArray);
     updateAdditionalOptions();
 }
 
@@ -58,7 +61,14 @@ function updateAdditionalOptions() {
         optionsContainer.appendChild(label);
     });
 
-    if (selectedArray.length > 0 || breadSelectedArray.length > 0) {
+    chickenSelectedArray.forEach(value => {
+        const label = document.createElement('label');
+        label.classList.add('flex', 'items-center');
+        label.innerHTML = `<input type="checkbox" class="w-6 h-6 mr-2" checked disabled> ${document.querySelector('input[value="' + value + '"]').nextSibling.textContent.trim()}`;
+        optionsContainer.appendChild(label);
+    });
+
+    if (selectedArray.length > 0 || breadSelectedArray.length > 0 || chickenSelectedArray.length > 0) {
         additionalOptions.classList.remove('hidden');
     } else {
         additionalOptions.classList.add('hidden');
@@ -70,7 +80,6 @@ function showMore() {
     alert("Show more button clicked!");
 }
 
-//kolichestvo 2 button
 function updateMessages() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     let checkedCount = 0;
@@ -88,10 +97,8 @@ function updateMessages() {
         message.textContent = `Выберите еще хотя бы ${remaining} элемента`;
     } else {
         message.textContent = "Достаточное количество элементов выбрано";
-
     }
 }
-
 
 
 
