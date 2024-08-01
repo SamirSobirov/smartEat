@@ -1,99 +1,25 @@
-let selectedArray = [];
-let breadSelectedArray = [];
-let chickenSelectedArray = [];
-let vegetableSelectedArray = [];
-
 function updateMessage() {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(.bread-checkbox):not(.chicken-checkbox):not(.vegetable-checkbox)');
-    selectedArray = updateCheckboxes(checkboxes, selectedArray);
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    let checkedCount = 0;
+
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            checkedCount++;
+        }
+    });
 
     const message = document.getElementById('message');
-    const remaining = 2 - selectedArray.length;
+    const remaining = 2 - checkedCount;
 
     if (remaining > 0) {
         message.textContent = `Выберите еще хотя бы ${remaining} элемента`;
     } else {
         message.textContent = "Достаточное количество элементов выбрано";
     }
-
-    updateAdditionalOptions();
 }
 
-function updateBreadSection() {
-    const breadCheckboxes = document.querySelectorAll('input[type="checkbox"].bread-checkbox');
-    breadSelectedArray = updateCheckboxes(breadCheckboxes, breadSelectedArray);
-    updateAdditionalOptions();
-}
 
-function updateChickenSection() {
-    const chickenCheckboxes = document.querySelectorAll('input[type="checkbox"].chicken-checkbox');
-    chickenSelectedArray = updateCheckboxes(chickenCheckboxes, chickenSelectedArray);
-    updateAdditionalOptions();
-}
-
-function updateVegetableSection() {
-    const vegetableCheckboxes = document.querySelectorAll('input[type="checkbox"].vegetable-checkbox');
-    vegetableSelectedArray = updateCheckboxes(vegetableCheckboxes, vegetableSelectedArray);
-    updateAdditionalOptions();
-}
-
-function updateCheckboxes(checkboxes, array) {
-    checkboxes.forEach(checkbox => {
-        if (checkbox.checked && !array.includes(checkbox.value)) {
-            array.push(checkbox.value);
-        } else if (!checkbox.checked && array.includes(checkbox.value)) {
-            array = array.filter(item => item !== checkbox.value);
-        }
-    });
-    return array; // Return the updated array
-}
-
-function updateAdditionalOptions() {
-    const additionalOptions = document.getElementById('additional-options');
-    const optionsContainer = additionalOptions.querySelector('.flex.flex-col');
-    optionsContainer.innerHTML = `
-        <p class="font-semibold text-sm pt-4">В дополнение к завтраку</p>
-    `;
-
-    selectedArray.forEach(value => {
-        const label = document.createElement('label');
-        label.classList.add('flex', 'items-center');
-        label.innerHTML = `<input type="checkbox" class="w-6 h-6 mr-2" checked disabled> ${document.querySelector('input[value="' + value + '"]').nextSibling.textContent.trim()}`;
-        optionsContainer.appendChild(label);
-    });
-
-    breadSelectedArray.forEach(value => {
-        const label = document.createElement('label');
-        label.classList.add('flex', 'items-center');
-        label.innerHTML = `<input type="checkbox" class="w-6 h-6 mr-2" checked disabled> ${document.querySelector('input[value="' + value + '"]').nextSibling.textContent.trim()}`;
-        optionsContainer.appendChild(label);
-    });
-
-    chickenSelectedArray.forEach(value => {
-        const label = document.createElement('label');
-        label.classList.add('flex', 'items-center');
-        label.innerHTML = `<input type="checkbox" class="w-6 h-6 mr-2" checked disabled> ${document.querySelector('input[value="' + value + '"]').nextSibling.textContent.trim()}`;
-        optionsContainer.appendChild(label);
-    });
-
-    vegetableSelectedArray.forEach(value => {
-        const label = document.createElement('label');
-        label.classList.add('flex', 'items-center');
-        label.innerHTML = `<input type="checkbox" class="w-6 h-6 mr-2" checked disabled> ${document.querySelector('input[value="' + value + '"]').nextSibling.textContent.trim()}`;
-        optionsContainer.appendChild(label);
-    });
-
-    if (selectedArray.length > 0 || breadSelectedArray.length > 0 || chickenSelectedArray.length > 0 || vegetableSelectedArray.length > 0) {
-        additionalOptions.classList.remove('hidden');
-    } else {
-        additionalOptions.classList.add('hidden');
-    }
-}
-
-function showMore() {
-    alert("Show more button clicked!");
-}
-
+//kolichestvo 2 button
 function updateMessages() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     let checkedCount = 0;
@@ -111,8 +37,12 @@ function updateMessages() {
         message.textContent = `Выберите еще хотя бы ${remaining} элемента`;
     } else {
         message.textContent = "Достаточное количество элементов выбрано";
+
     }
 }
+
+
+
 
 
 
