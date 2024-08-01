@@ -1465,7 +1465,7 @@
 				<label class="text-sm font-normal text-[#648179]">
 					на ужин<br>
 					<select id="goal" required aria-placeholder="Выберите значение …"
-						class="py-2 px-[2px] w-full rounded-lg border border-[#648179] text-base font-normal text-[#648179]">
+						class="py-2 px-[2px] w-full rounded-lg border border-[#648179] text-base font-normal text-[#648179] curtain">
 						<option value="maintain">Выберите значение …</option>
 						<option value="lose">1 день</option>
 						<option value="lose">2 день</option>
@@ -1479,6 +1479,40 @@
 
 			</div>
 
+			<style>
+				.curtain {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 34px; /* Adjust based on the height of the select */
+    transition: height 0.5s ease-in-out;
+}
+
+.curtain.open {
+    height: 200px; /* Adjust based on the number of options and their height */
+}
+
+.curtain option {
+    padding: 10px;
+}
+
+			</style>
+
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+    const select = document.getElementById('goal');
+
+    select.addEventListener('click', function () {
+        this.classList.toggle('open');
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!select.contains(e.target)) {
+            select.classList.remove('open');
+        }
+    });
+});
+			</script>
 
 
 
