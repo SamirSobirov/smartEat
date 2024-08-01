@@ -1517,13 +1517,13 @@
 
 
 				<script>
-					document.querySelector('.trigger1', '.trigger2', '.trigger3' ).addEventListener('click', function () {
-						document.querySelector('.custom-options', '.custom-options2', '.custom-options3').classList.toggle('hidden');
+					document.querySelector('.trigger1' ).addEventListener('click', function () {
+						document.querySelector('.custom-options').classList.toggle('hidden');
 					});
 
 					document.querySelectorAll('.custom-options span').forEach(option => {
 						option.addEventListener('click', function () {
-							document.querySelector('.trigger1').textContent = this.textContent; // Изменяем текст на выбранный
+							document.querySelector('.trigger1').textContent = this.textContent; 
 							document.querySelector('.custom-options').classList.add('hidden');
 						});
 					});
@@ -1544,7 +1544,7 @@
 					document.querySelectorAll('.custom-options2 span').forEach(option => {
 						option.addEventListener('click', function () {
 							document.querySelector('.trigger2').textContent = this.textContent; // Изменяем текст на выбранный
-							document.querySelector('.custom-options').classList.add('hidden');
+							document.querySelector('.custom-options2').classList.add('hidden');
 						});
 					});
 
@@ -1565,7 +1565,7 @@
 					document.querySelectorAll('.custom-options3 span').forEach(option => {
 						option.addEventListener('click', function () {
 							document.querySelector('.trigger3').textContent = this.textContent; // Изменяем текст на выбранный
-							document.querySelector('.custom-options').classList.add('hidden');
+							document.querySelector('.custom-options3').classList.add('hidden');
 						});
 					});
 
