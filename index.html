@@ -1496,7 +1496,7 @@
 						class="relative w-full border border-[#648179] rounded-lg bg-white cursor-pointer py-2 px-2 text-base text-[#648179]">
 						<div class="trigger3">Выберите значение …</div>
 						<div
-							class="absolute top-full left-0 w-full hidden custom-options bg-white border border-[#648179] rounded-lg z-10">
+							class="absolute top-full left-0 w-full hidden custom-options3 bg-white border border-[#648179] rounded-lg z-10">
 							<span class="block py-2 px-4 cursor-pointer3 hover:bg-gray-100" data-value="lose">1
 								день</span>
 							<span class="block py-2 px-4 cursor-pointer hover:bg-gray-100" data-value="lose">2
@@ -1517,13 +1517,13 @@
 
 
 				<script>
-					document.querySelector('.trigger1').addEventListener('click', function () {
-						document.querySelector('.custom-options').classList.toggle('hidden');
+					document.querySelector('.trigger1', '.trigger2', '.trigger3' ).addEventListener('click', function () {
+						document.querySelector('.custom-options', '.custom-options2', '.custom-options3').classList.toggle('hidden');
 					});
 
-					document.querySelectorAll('.custom-option').forEach(option => {
+					document.querySelectorAll('.custom-options span').forEach(option => {
 						option.addEventListener('click', function () {
-							document.querySelector('.trigger1').textContent = this.textContent;
+							document.querySelector('.trigger1').textContent = this.textContent; // Изменяем текст на выбранный
 							document.querySelector('.custom-options').classList.add('hidden');
 						});
 					});
@@ -1541,10 +1541,10 @@
 						document.querySelector('.custom-options2').classList.toggle('hidden');
 					});
 
-					document.querySelectorAll('.custom-option').forEach(option => {
+					document.querySelectorAll('.custom-options2 span').forEach(option => {
 						option.addEventListener('click', function () {
-							document.querySelector('.trigger2').textContent = this.textContent;
-							document.querySelector('.custom-options2').classList.add('hidden');
+							document.querySelector('.trigger2').textContent = this.textContent; // Изменяем текст на выбранный
+							document.querySelector('.custom-options').classList.add('hidden');
 						});
 					});
 
@@ -1555,21 +1555,23 @@
 					});
 				</script>
 
+
+
 				<script>
 					document.querySelector('.trigger3').addEventListener('click', function () {
 						document.querySelector('.custom-options3').classList.toggle('hidden');
 					});
 
-					document.querySelectorAll('.custom-option').forEach(option => {
+					document.querySelectorAll('.custom-options3 span').forEach(option => {
 						option.addEventListener('click', function () {
-							document.querySelector('.trigger3').textContent = this.textContent;
-							document.querySelector('.custom-options3').classList.add('hidden');
+							document.querySelector('.trigger3').textContent = this.textContent; // Изменяем текст на выбранный
+							document.querySelector('.custom-options').classList.add('hidden');
 						});
 					});
 
 					document.addEventListener('click', function (e) {
 						if (!document.querySelector('.relative').contains(e.target)) {
-							document.querySelector('.custom-options3').classList.add('hidden');
+							document.querySelector('.custom-options').classList.add('hidden');
 						}
 					});
 				</script>
