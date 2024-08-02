@@ -62,13 +62,13 @@ function updateMessages3() {
 
 // select spans
 // 1
-document.querySelector(".trigger1").addEventListener("click", function () {
+document.querySelector(".troggle1").addEventListener("click", function () {
   document.querySelector(".custom-options").classList.toggle("hidden");
 });
 
 document.querySelectorAll(".custom-options span").forEach((option) => {
   option.addEventListener("click", function () {
-    document.querySelector(".trigger1").textContent = this.textContent;
+    document.querySelector(".troggle1").textContent = this.textContent;
     document.querySelector(".custom-options").classList.add("hidden");
   });
 });
@@ -80,13 +80,13 @@ document.addEventListener("click", function (e) {
 });
 
 // 2
-document.querySelector(".trigger2").addEventListener("click", function () {
+document.querySelector(".troggle2").addEventListener("click", function () {
   document.querySelector(".custom-options2").classList.toggle("hidden");
 });
 
 document.querySelectorAll(".custom-options2 span").forEach((option) => {
   option.addEventListener("click", function () {
-    document.querySelector(".trigger2").textContent = this.textContent;
+    document.querySelector(".troggle2").textContent = this.textContent;
     document.querySelector(".custom-options2").classList.add("hidden");
   });
 });
@@ -98,13 +98,13 @@ document.addEventListener("click", function (e) {
 });
 
 // 3
-document.querySelector(".trigger3").addEventListener("click", function () {
+document.querySelector(".troggle3").addEventListener("click", function () {
   document.querySelector(".custom-options3").classList.toggle("hidden");
 });
 
 document.querySelectorAll(".custom-options3 span").forEach((option) => {
   option.addEventListener("click", function () {
-    document.querySelector(".trigger3").textContent = this.textContent;
+    document.querySelector(".troggle3").textContent = this.textContent;
     document.querySelector(".custom-options3").classList.add("hidden");
   });
 });
