@@ -1154,7 +1154,7 @@
 			</p>
 
 
-			<div class="pt-4 flex flex-col space-y-2 gap-4">
+			<div id="fruits" class="pt-4 flex flex-col space-y-2 gap-4">
 				<label class="flex items-center">
 					<input type="checkbox" class="w-6 h-6  mr-2">Яблоко
 				</label>
@@ -1169,6 +1169,48 @@
 				</label>
 			</div>
 
+
+			<div id="myModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex pb-[40%] items-center justify-center hidden">
+				<div class="bg-white rounded-lg shadow-lg p-6 w-[400px]">
+					<span class="close text-gray-600 text-xl float-right cursor-pointer">&times;</span>
+					<p class="text-center mb-4 font-bold text-2xl">Учтите сезонность фруктов, пожалуйста!</p>
+					<button id="acknowledgeButton" class="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+						Хорошо, учту
+					</button>
+				</div>
+			</div>
+			
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+				  // Получаем div с ID 'fruits'
+				  const section = document.getElementById("fruits");
+				  const checkboxes = section.querySelectorAll("input[type='checkbox']");
+				  const modal = document.getElementById("myModal");
+				  const closeButton = document.querySelector(".close");
+				  const acknowledgeButton = document.getElementById("acknowledgeButton");
+			  
+				  // Функция для показа модального окна
+				  function showModal() {
+					modal.classList.remove("hidden");
+				  }
+			  
+				  // Функция для закрытия модального окна
+				  function closeModal() {
+					modal.classList.add("hidden");
+				  }
+			  
+				  // Добавляем обработчики событий для всех чекбоксов в указанном секшоне
+				  checkboxes.forEach(checkbox => {
+					checkbox.addEventListener("change", showModal);
+				  });
+			  
+				  // Добавляем обработчики событий для кнопок закрытия модального окна
+				  closeButton.addEventListener("click", closeModal);
+				  acknowledgeButton.addEventListener("click", closeModal);
+				});
+			  </script>
+			  
+		
 
 			<div id="more-options11" class="pt-4 flex flex-col space-y-2 gap-4 hidden">
 				<label class="flex items-center">
