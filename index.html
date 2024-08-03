@@ -1758,7 +1758,7 @@
 
 
 	<div class="result_container w-[400px] h-full">
-        <div id="results">
+        <div id="results " class="pl-2 items-center justify-center text-start">
             <h2 class="font-bold">Параметры плана</h2>
             <div class="level_active lvl pt-6">
                 <p>Уровень физической активности:</p>
@@ -1770,20 +1770,23 @@
             </div>
             <div class="target_box lvl">
                 <p class="pt-4">Цель:</p>
-                <p class="target_p pt-8"><b>Похудеть (убрать жир)</b></p>
+                <p class="target_p pt-2"><b>Похудеть (убрать жир)</b></p>
             </div>
-            <div class="humman_info">
-                <p id="height_hum"></p>
-                <p id="weight_hum"></p>
-                <p id="age_hum"></p>
-                <p id="male_hum"></p>
-            </div>
-            <div class="bju_blocks">
-                <p id="proteins"></p>
-                <p id="fats"></p>
-                <p id="carbs"></p>
-                <p id="calories"></p>
-            </div>
+			<div class="humman_info pt-6 pl-2 flex items-center justify-start text-start gap-10 whitespace-nowrap">
+				<p id="height_hum"></p>
+				<p id="weight_hum"></p>
+				<p id="age_hum"></p>
+				<p id="male_hum"></p>
+			</div>
+			<div class="bju_blocks pl-2 flex items-center justify-start text-start gap-10 whitespace-nowrap">
+				<p id="proteins"></p>
+				<p id="fats"></p>
+				<p id="carbs"></p>
+				<p id="calories"></p>
+			</div>
+		
+
+			
 			<div class="items-center justify-center text-center pt-8">
             <button type="button" onclick="showEditForm()" class=" w-[200px] h-16 bg-white rounded-3xl text-blue-500 font-bold">Редактировать БЖУ</button>
 		</div>
