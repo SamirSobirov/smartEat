@@ -83,12 +83,12 @@ body {
 
 .container {
     align-items: center;
-    
+    justify-content: center;
     margin: 0 auto;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    width: 400px;
+    /* width: 400px; */
 }
 
 h1,
