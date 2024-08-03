@@ -1189,22 +1189,17 @@
 				  const closeButton = document.querySelector(".close");
 				  const acknowledgeButton = document.getElementById("acknowledgeButton");
 			  
-				  // Функция для показа модального окна
 				  function showModal() {
 					modal.classList.remove("hidden");
 				  }
-			  
-				  // Функция для закрытия модального окна
 				  function closeModal() {
 					modal.classList.add("hidden");
 				  }
 			  
-				  // Добавляем обработчики событий для всех чекбоксов в указанном секшоне
 				  checkboxes.forEach(checkbox => {
 					checkbox.addEventListener("change", showModal);
 				  });
 			  
-				  // Добавляем обработчики событий для кнопок закрытия модального окна
 				  closeButton.addEventListener("click", closeModal);
 				  acknowledgeButton.addEventListener("click", closeModal);
 				});
