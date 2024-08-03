@@ -44,10 +44,9 @@
 
 
 .custom-select {
-    padding: 5px;
     width: 100%;
     border-radius: 8px;
-    border: 1px solid #648179;
+    /* border: 1px solid #648179; */
     color: #648179;
     font-size: 16px;
     font-family: Arial, sans-serif;
@@ -290,7 +289,7 @@ button:hover {
 .custom-select .selected-option {
     background-color: white !important;
     border: 1px solid #648179;
-    padding: 8px;
+    padding: 18px 0 18px 10px;
     height: 25px;
     cursor: pointer;
     border-radius: 7px;

@@ -27,25 +27,27 @@
                 </label>
             </div>
             <br>
-            <div class="height_age_weight_box">
+            <div class="height_age_weight_box ">
                 <label class="age_height_weight">Рост, см <br> <input type="number" id="height" required></label>
                 <label class="age_height_weight">Вес, кг <br> <input type="number" id="weight" required></label>
                 <label class="age_height_weight">Возраст, лет <br> <input type="number" id="age" required></label>
             </div>
-            <label class="goal_plan_level_assessment">Цель: <br>
+
+			<div class="flex flex-col gap-2">
+            <label class="goal_plan_level_assessment text-sm">Цель: <br>
                 <div id="goalSelect" class="custom-select">
-                    <div class="selected-option">Выберите цель <img src="./icon/free-icon-up-and-down-arrows-10119502 (1).png" alt=""></div>
+                    <div class="selected-option w-full h-8">Выберите значение... <img src="./icon/free-icon-up-and-down-arrows-10119502 (1).png" alt=""></div>
                     <div class="options">
-                        <span data-value="maintain">Поддерживать свою форму</span>
+                        <span data-value="maintain" class="">Поддерживать свою форму</span>
                         <span data-value="lose">Похудеть (убрать жир)</span>
                         <span data-value="gain">Набрать мышечную массу</span>
                     </div>
                 </div>
-                <input type="hidden" id="goal" required>
+                <input  type="hidden" id="goal" required>
             </label>
             <label class="goal_plan_level_assessment">Планируемое количество тренировок в неделю: <br>
                 <div id="workoutsPerWeekSelect" class="custom-select">
-                    <div class="selected-option">Выберите количество тренировок <img src="./icon/free-icon-up-and-down-arrows-10119502 (1).png" alt=""></div>
+                    <div class="selected-option">Выберите значение... <img src="./icon/free-icon-up-and-down-arrows-10119502 (1).png" alt=""></div>
                     <div class="options">
                         <span data-value="0">0</span>
                         <span data-value="1">1</span>
@@ -59,9 +61,9 @@
                 </div>
                 <input type="hidden" id="workoutsPerWeek" required>
             </label>
-            <label class="goal_plan_level_assessment">Уровень активности: <br>
+            <label class="goal_plan_level_assessment">Уровень активности <br>
                 <div id="activityLevelSelect" class="custom-select">
-                    <div class="selected-option">Выберите уровень активности <img src="./icon/free-icon-up-and-down-arrows-10119502 (1).png" alt=""></div>
+                    <div class="selected-option ">Выберите значение... <img src="./icon/free-icon-up-and-down-arrows-10119502 (1).png" alt=""></div>
                     <div class="options">
                         <span data-value="low">Cидячая работа, не требующая значительных физических нагрузок</span>
                         <span data-value="low-low">Cлабый уровень активности</span>
@@ -75,7 +77,7 @@
             <div id="pregnancyStatusContainer" class="goal_plan_level_assessment">
                 Вы беременная или кормящая
                 <div id="pregnancyStatusSelect" class="custom-select">
-                    <div class="selected-option">Выберите статус беременности <img src="./icon/free-icon-up-and-down-arrows-10119502 (1).png" alt=""></div>
+                    <div class="selected-option">Выберите значение... <img src="./icon/free-icon-up-and-down-arrows-10119502 (1).png" alt=""></div>
                     <div class="options">
                         <span data-value="none">Не беременная / не кормящая</span>
                         <span data-value="pregnant">Беременная</span>
@@ -84,6 +86,7 @@
                     </div>
                 </div>
                 <input type="hidden" id="pregnancyStatus">
+			</div>
             </div>
             <button class="result_btn" type="button" id="calculateBtn" onclick="calculateBJU()">Рассчитать</button>
         </form>
