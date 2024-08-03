@@ -22,3 +22,14 @@ document.getElementById('toggleButtonFood2').addEventListener('click', function(
     button.classList.toggle('rotate');
 });
 
+
+document.getElementById('toggleButtonHeader').addEventListener('click', function() {
+    const content = document.getElementById('contentHeader');
+    const button = document.getElementById('toggleButtonHeader');
+    content.classList.toggle('hidden');
+    button.classList.toggle('rotate');
+});
+
+
+
+

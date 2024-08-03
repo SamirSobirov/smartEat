@@ -16,7 +16,16 @@
 
 
 	<div class="container w-[400px]">
+		<div class="flex gap-[120px]">
         <h1 class="plan_txt font-bold">ДАННЫЕ ДЛЯ ПЛАНА</h1>
+		<button id="toggleButtonHeader">
+			<img src="./images/icons/arrow-up.svg" alt="">
+		</button>
+	</div>
+
+		
+		<div id="contentHeader">
+
         <form id="bjuForm">
             <div class="male_box pt-8">
                 <label>
@@ -90,8 +99,8 @@
             </div>
             <button class="result_btn" type="button" id="calculateBtn" onclick="calculateBJU()">Рассчитать</button>
         </form>
+	</div>
     </div>
-
 
 
 	<section class="p-4 pr-4 w-[400px] h-full shadow-md mx-auto rounded-xl items-center justify-center mt-8">
