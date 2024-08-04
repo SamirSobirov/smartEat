@@ -113,14 +113,14 @@ form label {
     display: flex;
 }
 
-.age_height_weight {
+/* .age_height_weight {
     font-size: 14px;
     color: #648179;
     font-weight: 400;
-}
+} */
 
 .age_height_weight input {
-    width: 70%;
+    width: 115px;
     border-radius: 7px;
     border: 1px solid #648179;
     font-size: 14px;
