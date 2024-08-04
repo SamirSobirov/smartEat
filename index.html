@@ -1783,23 +1783,23 @@
                 <p class="target_p pt-4 font-bold text-base"><b>Похудеть (убрать жир)</b></p>
             </div>
 			<div class="humman_info pt-6 pl-2 flex items-center justify-start text-start gap-10 whitespace-nowrap">
-				<p id="height_hum"></p>
-				<p id="weight_hum"></p>
-				<p id="age_hum"></p>
-				<p id="male_hum"></p>
+				<p id="height_hum" class="font-bold"></p>
+				<p id="weight_hum" class="font-bold"></p>
+				<p id="age_hum" class="font-bold"></p>
+				<p id="male_hum" class="font-bold"></p>
 			</div>
 			<div class="bju_blocks pl-2 Pt-4 flex items-center justify-start text-start gap-10 whitespace-nowrap">
-				<p id="proteins"></p>
-				<p id="fats"></p>
-				<p id="carbs"></p>
-				<p id="calories"></p>
+				<p id="proteins" class="font-bold"></p>
+				<p id="fats" class="font-bold"></p>
+				<p id="carbs" class="font-bold"></p>
+				<p id="calories" class="font-bold"></p>
 			</div>
 		
 
 			
 			<div class="items-center justify-center text-center pt-8 ">
             <button type="button" onclick="showEditForm()" class="shadow-md w-[250px] h-12 bg-white rounded-3xl text-blue-500 font-bold">Редактировать БЖУ</button>
-				<p class="pt-2 text-sm">Вы можете отредактировать КБЖУ плана СЕЙЧАС</p>
+				<p class="text-sm pt-2 ">Вы можете отредактировать КБЖУ плана СЕЙЧАС</p>
 		</div>
 		</div>
     </div>
@@ -1807,16 +1807,18 @@
     <div class="edit_form_cont w-[400px]">
         <div id="editForm" style="display:none;">
             <h2>Редактирование БЖУ</h2>
-            <div class="edit_box">
-                <label>Белки, гр <br><input type="number" id="editProteinsPerKg"></label>
-                <label>Жиры, гр <br><input type="number" id="editFatsPerKg"></label>
-                <label>Углеводы, гр <br><input type="number" id="editCarbsPerKg"></label>
+            <div class="edit_box pt-4">
+                <label class="text-xs text-gray-500">Белки, гр <br><input type="number" id="editProteinsPerKg"></label>
+                <label class="text-xs text-gray-500">Жиры, гр <br><input type="number" id="editFatsPerKg"></label>
+                <label class="text-xs text-gray-500">Углеводы, гр <br><input type="number" id="editCarbsPerKg"></label>
             </div>
-            <label class="kaloriy__">Калорийность плана, ккал: <br><input class="w-full" type="number" id="editCalories" /></label>
+
+			<p class="text-lg pt-2">Соотношение БЖУ, %</p>
+            <label class="kaloriy__  text-xs pt-2 text-gray-500">Калорийность плана, ккал: <br><input class="w-full" type="number" id="editCalories" /></label>
             <div class="edit_two_box">
-                <label class="belki_procent">Белки, %: <br><input type="number" id="editProteinPercentage"></label> <br>
-                <label class="jiri_procent">Жиры, %: <br><input type="number" id="editFatPercentage"></label>
-                <label class="uglevodi_procent">Углеводы, %: <br><input type="number" id="editCarbPercentage"></label>
+                <label class="belki_procent text-xs text-gray-500">Белки, %: <br><input type="number" id="editProteinPercentage"></label> <br>
+                <label class="jiri_procent text-xs text-gray-500">Жиры, %: <br><input type="number" id="editFatPercentage"></label>
+                <label class="uglevodi_procent text-xs text-gray-500">Углеводы, %: <br><input type="number" id="editCarbPercentage"></label>
             </div>
             <button type="button" id="calculateBtn">Сохранить</button>
         </div>
