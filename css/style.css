@@ -245,8 +245,14 @@ button {
     padding: 10px 20px;
 }
 
-button:hover {
+#btnModal:hover {
     background-color: #45a049;
+    color: white;
+}
+
+#btnModal{
+    border-color: #45a049;
+    border: 1px solid  #45a049;
 }
 
 #results,
